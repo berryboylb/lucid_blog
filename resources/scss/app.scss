@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    overflow: hidden;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 5px 10px #888888;
+}
+
+/* .title {
+    margin-left: 5%;
+} */
+
+.title h3 {
+    font-size: 25px;
+    color: #29092F;
+}
+
+.navlist {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlist li {
+    /* display: inline; */
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    color: #29092F;
+
+
+}
+
+.navlist li a:hover {
+    opacity: 0.7;
+}
+
+.login {
+    background: chocolate;
+    padding: 7px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+.login:hover {
+    color: chocolate;
+    background: #fff;
+    font-weight: bold;
+}
+
+.signup {
+    background: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    color: cornflowerblue;
+    border: none;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+.signup:hover {
+    color:  #fff;
+    background:chocolate;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.line0 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.line1 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.line2 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.nav-active {
+    position: absolute;
+    background: cornflowerblue;
+    height: 93vh;
+    width: 100% !important;
+    right: 0; 
+    left: 0;
+    bottom: 0;
+     top: 7vh;
+     flex-direction: column;
+     justify-content: space-around;
+     display: flex !important;
+     z-index: 9999999999999;
+}
+
+.toggle .line0 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    margin-top: 5px;
+}
+
+.toggle .line1 {
+    opacity: 0;
+}
+
+.toggle .line2 {
+    transform: rotate(45deg) translate(-6px, -6px);
+    margin-top: 6px;
+    
+}
+
+
+@media screen and (max-width:1024px) {
+    .navlist {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        justify-content: space-between;
+        height: 8vh;
+        padding: 5%;
+    }
+
+    .menu {
+        display: block ;
+    }
+    
+    .navlist {
+        display: none;
+    }
+
+    .navlist li, .signup, .login {
+        font-size: 14px;
+    }
+}
+
