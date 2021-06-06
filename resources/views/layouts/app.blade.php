@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
     <header>
@@ -15,8 +16,21 @@
 
              @yield('content')
 
-    {{-- <footer>
-        @include('layouts.footer')
-     </footer> --}}
+    <footer>
+        @include('partials.footer')
+     </footer>
+     <script>
+         const dropDown = document.querySelector('#dropDown');
+         const dropDownContent = document.querySelector('.dropdown-content');
+
+        const myFunction = () => {
+            dropDown.addEventListener('click', ()=>{
+            console.log('hi');
+            dropDownContent.classList.toggle('activate-dropdown');
+        });
+        }
+
+        myFunction();
+     </script>
 </body>
 </html>

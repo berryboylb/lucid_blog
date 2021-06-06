@@ -1842,6 +1842,11 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var dropDown = document.querySelector('#dropDown');
+dropDown.addEventListener('click', function () {
+  console.log('hi');
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
