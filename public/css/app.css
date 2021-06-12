@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
 * {
   margin: 0;
   padding: 0;
@@ -237,12 +238,13 @@ nav {
     width: 80%;
   }
 }
+.active-link {
+  color: #871E99 !important;
+  cursor: pointer;
+}
+
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 5%;
 }
 footer .footer-inner {
@@ -315,4 +317,350 @@ footer .footer-inner ul li a:hover {
   footer .footer-inner ul li {
     margin-bottom: 2%;
   }
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+.home-sect {
+  background: #fdfdfd;
+  padding: 2%;
+}
+
+.home-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home-style .checklist-settings {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+.home-style .checklist-settings .checklist {
+  background: #fff;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 5px;
+}
+.home-style .checklist-settings .checklist .checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  border-bottom: 1px solid rgba(135, 30, 153, 0.2);
+}
+.home-style .checklist-settings .checklist .checklist-header h1 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #220726;
+  font-family: "Lato", sans-serif;
+}
+.home-style .checklist-settings .checklist .checklist-header i {
+  color: #666666;
+  font-size: 18px;
+}
+.home-style .checklist-settings .checklist .moguls {
+  padding: 5% 2% 10% 2%;
+}
+.home-style .checklist-settings .checklist .moguls div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  height: 40px;
+  /* The beta */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.home-style .checklist-settings .checklist .moguls div h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #220726;
+  margin-top: 2%;
+}
+.home-style .checklist-settings .checklist .moguls div .beta {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: pink;
+}
+.home-style .checklist-settings .checklist .moguls div .beta input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.home-style .checklist-settings .checklist .moguls div .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  padding: 20%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.home-style .checklist-settings .checklist .moguls div .beta:hover input ~ .checkmark {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.home-style .checklist-settings .checklist .moguls div .beta input:checked ~ .checkmark {
+  background-color: #871E99;
+  border-radius: 5px;
+}
+.home-style .checklist-settings .checklist .moguls div .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.home-style .checklist-settings .checklist .moguls div .beta input:checked ~ .checkmark:after {
+  display: block;
+}
+.home-style .checklist-settings .checklist .moguls div .beta .checkmark:after {
+  left: 9px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.home-style .checklist-settings .settings {
+  background: #F5F5F5;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 10%;
+  padding: 5%;
+  border-radius: 5px;
+}
+.home-style .checklist-settings .settings form {
+  /*style the arrow inside the select element:*/
+  /*point the arrow upwards when the select box is open (active):*/
+  /*style the items (options), including the selected item:*/
+  /*style items (options):*/
+  /*hide the items when the select box is closed:*/
+}
+.home-style .checklist-settings .settings form h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #220726;
+  font-family: "Lato", sans-serif;
+}
+.home-style .checklist-settings .settings form .custom-select {
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+}
+.home-style .checklist-settings .settings form .custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+.home-style .checklist-settings .settings form .select-selected {
+  background-color: #fff;
+  border-radius: 3px;
+}
+.home-style .checklist-settings .settings form .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #871E99 transparent transparent transparent;
+}
+.home-style .checklist-settings .settings form .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #871E99 transparent;
+  top: 7px;
+}
+.home-style .checklist-settings .settings form .select-items div, .home-style .checklist-settings .settings form .select-selected {
+  color: #29092F;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+.home-style .checklist-settings .settings form .select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.home-style .checklist-settings .settings form .select-hide {
+  display: none;
+}
+.home-style .checklist-settings .settings form .select-items div:hover, .home-style .checklist-settings .settings form .same-as-selected {
+  background-color: #871E99;
+  color: #fff;
+}
+.home-style .posts {
+  width: 78%;
+  background: #FFFFFF;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.home-style .posts .content {
+  padding: 2% 5% 2% 5%;
+}
+.home-style .posts .content .topics-people {
+  width: 100%;
+}
+.home-style .posts .content .topics-people h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #220726;
+  font-family: "Poppins", sans-serif;
+  padding: 2% 0% 2% 0%;
+  border-bottom: 1px solid #50115A;
+}
+.home-style .posts .content .topics-people .people {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-top: 2%;
+}
+.home-style .posts .content .topics-people .people::-webkit-scrollbar {
+  height: 2px;
+  width: 0px;
+  background: transparent;
+}
+.home-style .posts .content .topics-people .people::-webkit-scrollbar-track {
+  background: transparent;
+}
+.home-style .posts .content .topics-people .people::-webkit-scrollbar-thumb {
+  background: #871E99;
+}
+.home-style .posts .content .topics-people .people::-webkit-scrollbar-thumb:hover {
+  background: #29092F;
+}
+.home-style .posts .content .topics-people .people figure {
+  display: inline-block;
+  padding: 2%;
+}
+.home-style .posts .content .topics-people .people figure img {
+  width: 70px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  height: 70px;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%);
+}
+.home-style .posts .content .topics-people .people figure figcaption {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #220726;
+}
+.home-style .posts .content .blog-posts {
+  width: 100%;
+}
+.home-style .posts .content .blog-posts .main-content {
+  margin-top: 0%;
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.home-style .posts .content .blog-posts .main-content .profile-img {
+  width: 10%;
+  height: 100%;
+  padding: 1.7%;
+}
+.home-style .posts .content .blog-posts .main-content .profile-img img {
+  height: 50px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible {
+  width: 90%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
+  color: #871E99;
+  margin-top: 1%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible h3 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2B0B31;
+  margin-top: 1%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #29092F;
+  margin-top: 2%;
 }

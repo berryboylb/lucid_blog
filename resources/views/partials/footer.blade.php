@@ -1,13 +1,13 @@
 
-<div class="footer-inner">
-        <div class="footer-logo"><img src="{{ asset('images/logo (1).png') }}" alt="Logo"></div>
-        <div class="footer-content"><p>© 2020 Lucid v1.0. All rights reserved.</p></div>
+<div class="footer-inner container">
+
+        <div class="footer-logo"><img src="{{ asset('images/'. $Ui_designs->bottom_logo) }}" alt="Logo"></div>
+         <div class="footer-content"><p>{{ $Ui_designs->footer_text }}</p></div>
         <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Get Started</a></li>
+            @if (count($links) > 0)
+                @foreach ($links as $link)
+                    <li><a href="{{ '/'.$link->name }}" class="{{ request()->is('/'.$link->name) ? 'active-link' : '' }}">{{ $link->name }}</a></li> 
+                @endforeach
+            @endif
         </ul>
 </div>
