@@ -136,6 +136,7 @@ nav {
 
 .activate-dropdown {
   display: block;
+  z-index: 9999999999;
 }
 
 .profile-details {
@@ -364,6 +365,9 @@ footer .footer-inner ul li a:hover {
   justify-content: stretch;
   align-items: center;
 }
+.home-style .checklist-settings #close {
+  display: none;
+}
 .home-style .checklist-settings .checklist {
   background: #fff;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
@@ -585,10 +589,11 @@ footer .footer-inner ul li a:hover {
 }
 .home-style .posts .content .topics-people .people figure {
   display: inline-block;
+  width: 100px;
   padding: 2%;
 }
 .home-style .posts .content .topics-people .people figure img {
-  width: 70px !important;
+  width: 70px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -640,6 +645,11 @@ footer .footer-inner ul li a:hover {
   color: #871E99;
   margin-top: 1%;
 }
+.home-style .posts .content .blog-posts .main-content .content-visible small {
+  font-size: 10px;
+  color: #aaa;
+  font-family: "Open Sans", sans-serif;
+}
 .home-style .posts .content .blog-posts .main-content .content-visible h3 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -651,7 +661,7 @@ footer .footer-inner ul li a:hover {
 }
 .home-style .posts .content .blog-posts .main-content .content-visible img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -663,4 +673,168 @@ footer .footer-inner ul li a:hover {
   line-height: 2;
   color: #29092F;
   margin-top: 2%;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible p a {
+  text-decoration: none;
+  background: #871E99;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+}
+.home-style .posts .content .blog-posts .main-content .content-visible p a:hover {
+  background: #50115A;
+}
+
+.show-read-more .more-text {
+  display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .checklist-settings {
+    width: 25% !important;
+  }
+  .checklist-settings .checklist .moguls div h3 {
+    font-size: 12px !important;
+  }
+  .checklist-settings .checklist .checklist-header h1 {
+    font-size: 16px !important;
+  }
+  .checklist-settings .checklist .checklist-header i {
+    font-size: 16px !important;
+  }
+  .checklist-settings .settings form h3 {
+    font-size: 16px !important;
+  }
+  .checklist-settings .settings form .select-items div, .checklist-settings .settings form .select-selected {
+    font-size: 12px !important;
+  }
+
+  .posts {
+    width: 72% !important;
+  }
+  .posts .content .topics-people {
+    margin-top: 0;
+  }
+  .posts .content .topics-people h3 {
+    font-size: 20px !important;
+    padding: 0% 0% 0% 0% !important;
+  }
+  .posts .content .topics-people .people figure img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .posts .content .topics-people .people figure figcaption {
+    font-size: 12px !important;
+  }
+  .posts .content .blog-posts .main-content .profile-img {
+    width: 10% !important;
+    padding: 1% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .posts .content .blog-posts .main-content .profile-img img {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible {
+    width: 88% !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible h2 {
+    font-size: 16px !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible small {
+    font-size: 8px !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible h3 {
+    font-size: 16px !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible img {
+    height: 200px;
+  }
+  .posts .content .blog-posts .main-content .content-visible p {
+    font-size: 12px !important;
+    line-height: 2.3 !important;
+    margin-top: 2.3% !important;
+  }
+  .posts .content .blog-posts .main-content .content-visible p a {
+    padding: 3px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-sect {
+    padding: 0 !important;
+  }
+  .home-sect .container {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .home-sect .checklist-settings {
+    display: none;
+    height: 92vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 8vh;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 2%;
+    width: 95% !important;
+    align-items: flex-start !important;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+  .home-sect .checklist-settings #close {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 18px;
+    color: #871E99;
+  }
+  .home-sect .checklist-settings .checklist {
+    width: 80% !important;
+    margin-top: 5%;
+  }
+  .home-sect .checklist-settings .settings {
+    width: 80% !important;
+  }
+  .home-sect .posts {
+    width: 100% !important;
+  }
+  .home-sect .posts .main-content {
+    margin-bottom: 2%;
+  }
+  .home-sect .posts .main-content .profile-img {
+    width: 10% !important;
+    padding: 1%;
+  }
+  .home-sect .posts .main-content .content-visible {
+    width: 88% !important;
+  }
+  .home-sect .posts .main-content .content-visible h2 {
+    font-size: 16px !important;
+  }
+  .home-sect .posts .main-content .content-visible small {
+    font-size: 8px !important;
+  }
+  .home-sect .posts .main-content .content-visible h3 {
+    font-size: 16px !important;
+  }
+  .home-sect .posts .main-content .content-visible img {
+    height: 150px !important;
+  }
+  .home-sect .posts .main-content .content-visible p {
+    font-size: 12px !important;
+    line-height: 2.3 !important;
+    margin-top: 2.3% !important;
+  }
+  .home-sect .posts .main-content .content-visible p a {
+    padding: 3px !important;
+  }
 }

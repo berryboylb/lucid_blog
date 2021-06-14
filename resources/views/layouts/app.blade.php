@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
-
-    <style>
-        .show-read-more .more-text{
-            display: none !important;
-        }
-    </style>
 </head>
 <body >
     <header>
@@ -25,7 +19,8 @@
     <footer>
         @include('partials.footer')
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> --}}
      <script>
          const dropDown = document.querySelector('#dropDown');
          const dropDownContent = document.querySelector('.dropdown-content');
@@ -122,7 +117,7 @@
 
     <script>
         $(document).ready(function(){
-            var maxLength = 200;
+            var maxLength = 250;
             $(".show-read-more").each(function(){
                 var myStr = $(this).text();
                 if($.trim(myStr).length > maxLength){

@@ -139,10 +139,12 @@ nav {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
     display: none;
+
 }
 
 .activate-dropdown {
     display: block;
+    z-index: 9999999999;
 }
 
 // .dropdown-content:after{
@@ -471,6 +473,10 @@ footer {
         justify-content: stretch;
         align-items: center;
 
+        #close {
+            display: none;
+        }
+
         .checklist {
             background: #fff;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
@@ -733,11 +739,11 @@ footer {
 
                     figure {
                         display: inline-block;
-                        //width: 200px;
+                        width: 100px;
                         padding: 2%;
 
                         img {
-                            width: 70px !important;
+                            width: 70px;
                             object-fit: cover;
                             border-radius: 50%;
                             height: 70px;
@@ -795,6 +801,12 @@ footer {
                                 margin-top: 1%;
                             }
 
+                            small {
+                                font-size: 10px;
+                                color: #aaa;
+                                font-family: 'Open Sans', sans-serif;
+                            }
+
                             h3 {
                                 font-family: 'Poppins', sans-serif;
                                 font-style: normal;
@@ -807,7 +819,7 @@ footer {
 
                             img {
                                 width: 100%;
-                                height: 300px;
+                                height: 250px;
                                 object-fit: cover;
                                 border-radius: 5px;
                                 margin-top: 2%;
@@ -820,12 +832,248 @@ footer {
                                 line-height: 2;
                                 color: #29092F;
                                 margin-top: 2%;
+
+                                a {
+                                    text-decoration: none;
+                                    background: #871E99;
+                                    color: #fff;
+                                    font-family: 'Open Sans', sans-serif;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                }
+
+                                a:hover {
+                                    background: #50115A;
+                                }
                             }
                     }
 
 
 
                     
+                }
+            }
+        }
+    }
+}
+
+ .show-read-more .more-text{
+    display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .checklist-settings {
+        width: 25% !important;
+
+        .checklist {
+
+            .moguls {
+                div {
+                    h3 {
+                        font-size: 12px !important;   
+                    }
+                }
+            }
+
+            .checklist-header {
+                h1 {
+                    font-size: 16px !important;
+                }
+
+                i {
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        .settings {
+            form {
+                h3 {
+                    font-size: 16px !important; 
+                }
+                .select-items div,.select-selected {
+                    font-size: 12px !important;
+                  }
+            }
+        }
+    }
+
+    .posts {
+        width: 72% !important;
+        .content {
+            .topics-people {
+                margin-top: 0;
+                h3 {
+                    font-size: 20px !important; 
+                    padding: 0% 0% 0% 0% !important;
+                }
+
+                .people {
+
+                    figure {
+
+                        img {
+                            width: 50px !important;
+                            height: 50px !important;
+                        }
+
+                        figcaption {
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+            }
+
+            .blog-posts {
+
+                .main-content {
+
+                    .profile-img {
+                        width: 10% !important;
+                        padding: 1% !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            height: 30px !important;
+                             width: 30px !important;
+                        }
+                    }
+
+                    .content-visible {
+                        width: 88% !important;
+                        h2 {
+                            font-size: 16px !important;
+                        }
+
+                        small {
+                            font-size: 8px !important;
+
+                        }
+
+                        h3 {
+                            font-size: 16px !important;
+                        }
+
+                        img {
+                            height: 200px;
+                        }
+
+                        p {
+                            font-size: 12px !important;
+                            line-height: 2.3 !important;
+                            margin-top: 2.3% !important;
+
+                            a {
+                                padding: 3px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .home-sect {
+        padding: 0 !important;
+        .container {
+            padding: 0 !important;   
+            width: 100% !important;
+        }
+        .checklist-settings {
+            display: none;
+            // position: relative;
+            // top: 8vh;
+            // left: 0;
+            // bottom: 0;
+            // transition: 2s;
+            // z-index: 99999999;
+            // background: chartreuse;
+            // width: 60% !important;
+            // padding: 2%;
+
+
+            height: 92vh;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 8vh;
+            left: 0;
+            background-color: rgba(255,255,255,0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding: 2%;
+            width: 95% !important;
+            align-items: flex-start !important;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            white-space: nowrap;
+
+            #close {
+                display: block;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                font-size: 18px;
+                color: #871E99;
+            }
+
+            .checklist {
+                //background: chartreuse;
+                width: 80% !important;
+                margin-top: 5%;
+
+                .checklist-header {
+                    //background: chocolate;
+                }
+            }
+
+            .settings {
+                width: 80% !important;
+            }
+        }
+    
+        .posts {
+            width: 100% !important;
+
+            .main-content {
+                margin-bottom: 2%;
+                .profile-img {
+                    width: 10% !important;
+                    padding: 1%;
+                }
+
+                .content-visible {
+                    width: 88% !important;
+                    h2 {
+                        font-size: 16px !important;
+                    }
+
+                    small {
+                        font-size: 8px !important;
+                    }
+
+                    h3 {
+                        font-size: 16px !important;
+                    }
+
+                    img {
+                        height: 150px !important;
+                    }
+
+                    p {
+                        font-size: 12px !important;
+                        line-height: 2.3 !important;
+                        margin-top: 2.3% !important;
+
+                        a {
+                            padding: 3px !important;
+                        }
+                    }
                 }
             }
         }

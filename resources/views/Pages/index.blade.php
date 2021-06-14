@@ -4,6 +4,7 @@
     <section class="home-sect"> 
         <div class="container home-style">
             <div class="checklist-settings">
+                <i id="close" class="fas fa-times"></i>
                 <div class="checklist">
                     <div class="checklist-header">
                         <h1>Categories</h3>
@@ -168,9 +169,10 @@
                    </div>
                    <div class="blog-posts">
                         <div class="main-content">
-                            <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
+                            <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>Declan Rice</h2>
+                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                 <h3>The art of troubleshooting</h3>
                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
@@ -180,9 +182,10 @@
                             <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>Tristen Mark</h2>
+                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                 <h3>Product design walk arounds</h3>
                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                                <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
                             </div>
                        </div>
                    </div>
@@ -215,27 +218,30 @@
                              <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
                              <div class="content-visible">
                                  <h2>Kevin Price</h2>
+                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                  <h3>The Future of embedded systems</h3>
                                  <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
                              </div>
                          </div>
                          <div class="main-content">
                              <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
                              <div class="content-visible">
                                  <h2>Haylee Lu</h2>
+                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                  <h3>Product design walk arounds</h3>
                                  <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
                              </div>
                         </div>
                         <div class="main-content">
                             <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>Haylee Lu</h2>
+                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                 <h3>Product design walk arounds</h3>
                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                                <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
                             </div>
                        </div>
                     </div>
@@ -268,9 +274,10 @@
                              <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
                              <div class="content-visible">
                                  <h2>Kevin Price</h2>
+                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
                                  <h3>Learn Git</h3>
                                  <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
                              </div>
                          </div>
                     </div>
