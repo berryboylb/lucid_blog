@@ -7,9 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}"></script>
 </head>
-<body >
+<body id="body">
     <header>
         @include('partials.header')
     </header>
@@ -24,12 +23,13 @@
      <script>
          const dropDown = document.querySelector('#dropDown');
          const dropDownContent = document.querySelector('.dropdown-content');
+         
 
         const myFunction = () => {
             dropDown.addEventListener('click', ()=>{
             console.log('hi');
             dropDownContent.classList.toggle('activate-dropdown');
-        });
+            });
         }
 
         myFunction();
@@ -133,6 +133,74 @@
             //     $(this).remove();
             // });
         });
+    </script>
+    <script>
+        const close = document.querySelector('#close');
+        var categories = document.querySelector('.checklist-settings');
+       document.addEventListener('touchstart', handleTouchStart, false);        
+        document.addEventListener('touchmove', handleTouchMove, false);
+
+        var xDown = null;                                                        
+        var yDown = null;                                                        
+
+        function handleTouchStart(evt) {                                         
+            xDown = evt.touches[0].clientX;                                      
+            yDown = evt.touches[0].clientY;                                      
+        };                                                
+
+        function handleTouchMove(evt) {
+            if ( ! xDown || ! yDown ) {
+                return;
+            }
+
+            var xUp = evt.touches[0].clientX;                                    
+            var yUp = evt.touches[0].clientY;
+
+            var xDiff = xDown - xUp;
+            var yDiff = yDown - yUp;
+
+            if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+                if ( xDiff > 0 ) {
+                    /* left swipe */ 
+                    console.log('left swipe');
+                } else {
+                    /* right swipe */
+                    console.log('right swipe');
+                    var categories = document.querySelector('.checklist-settings');
+
+                    if(document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
+                        categories.style.top = "0vh";
+                        categories.style.height = "100vh";
+                    }
+
+                    if (categories.style.display = "none" ){
+                        categories.style.display = "block";
+                              
+                    }
+                   
+                }  
+
+            } else {
+                if ( yDiff > 0 ) {
+                    /* up swipe */ 
+                } else { 
+                    /* down swipe */
+                }                                                                 
+            }
+            /* reset values */
+            xDown = null;
+            yDown = null;                                             
+        };
+
+        const newFunction = () => {
+           close.addEventListener('click', ()=> {
+               if(categories.style.display != "none"){
+                categories.style.display = "none";
+               }
+           }) 
+        }
+
+        newFunction();
     </script>
 </body>
 </html>

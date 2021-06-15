@@ -3,7 +3,7 @@
 @section('content')
     <section class="home-sect"> 
         <div class="container home-style">
-            <div class="checklist-settings">
+            <div class="checklist-settings" id="sidebar">
                 <i id="close" class="fas fa-times"></i>
                 <div class="checklist">
                     <div class="checklist-header">
