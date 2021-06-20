@@ -1001,17 +1001,17 @@ footer {
             // padding: 2%;
 
 
-            height: 92vh;
+            height: 100vh;
             width: 0;
             position: fixed;
             z-index: 1;
-             top: 8vh;
+             top: 0;
             left: 0;
-            background-color: rgba(255,255,255,0.9);
+            background-color: rgba(255, 255, 255, 0.9);
             overflow-x: hidden;
             transition: 0.5s;
             padding: 2%;
-            width: 95% !important;
+            width: 100% !important;
             align-items: flex-start !important;
             overflow-y: scroll;
             scroll-behavior: smooth;
@@ -1029,12 +1029,12 @@ footer {
 
             .checklist {
                 //background: chartreuse;
-                width: 80% !important;
+                width: 95% !important;
                 margin-top: 5%;
             }
 
             .settings {
-                width: 80% !important;
+                width: 95% !important;
             }
         }
     

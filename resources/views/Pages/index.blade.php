@@ -11,76 +11,20 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                     <div class="moguls">
-                        <div>
-                            <h3>Start Ng</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Developer</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Engineering</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Github</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Learning</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Laravel</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Css</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Technology</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>News</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <h3>Clubhouse</h3>
-                            <label class="beta">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
+
+                        @if (count($Categories) > 0)
+                        @foreach ($Categories as $Category)
+                            <div>
+                                <h3>{{ $Category->category }}</h3>
+                                <label class="beta">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div> 
+                        @endforeach
+                        @else
+                        <h2>No Categories</h2>
+                    @endif
                     </div>
                 </div>
 

@@ -19,6 +19,7 @@
         @include('partials.footer')
     </footer>
     <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> --}}
      <script>
          const dropDown = document.querySelector('#dropDown');
@@ -163,19 +164,29 @@
                 if ( xDiff > 0 ) {
                     /* left swipe */ 
                     console.log('left swipe');
+                    var categories = document.querySelector('.checklist-settings');
+                    if (categories.style.display != "none" ){
+                        categories.style.display = "none";         
+                    }
+
                 } else {
                     /* right swipe */
                     console.log('right swipe');
                     var categories = document.querySelector('.checklist-settings');
 
-                    if(document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
-                        categories.style.top = "0vh";
-                        categories.style.height = "100vh";
-                    }
+                    // if(document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
+                    //     categories.style.top = "0vh";
+                    //     categories.style.height = "100vh";
+                    // }
+                    // if(document.documentElement.scrollTop < 0 || document.body.scrollTop < 0){
+                    //     categories.style.top = "8vh";
+                    //     categories.style.height = "92vh";
+                    // }
 
                     if (categories.style.display = "none" ){
                         categories.style.display = "block";
-                              
+                        let tl = gsap.timeline({defaults:{duration: 1.5}});
+                        tl.from('.checklist-settings', { y:100, opacity: 0, ease: 'bounce',})      
                     }
                    
                 }  
