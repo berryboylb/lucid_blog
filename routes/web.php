@@ -18,4 +18,5 @@ use App\Http\Controllers\PagesController;
 //     return view('welcome');
 // });
 
-Route::get('/', [PagesController::class, 'index']);
+//Route::get('/', [PagesController::class, 'index']);
+Route::resource('/', 'App\Http\Controllers\PostController');

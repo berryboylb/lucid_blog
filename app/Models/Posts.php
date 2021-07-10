@@ -11,5 +11,13 @@ class Posts extends Model
 
     protected $table = 'posts';
 
-    protected $fillables = ['title', 'body', 'image_path', 'views'];
+    protected $fillable = ['title', 'body', 'image_path', 'views', 'user_id', 'categories_id', 'published'];
+
+    public function categories(){
+        return $this->belongsTo(Categories::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

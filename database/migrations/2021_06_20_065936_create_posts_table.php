@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('category_id')->unsigned();
+            $table->integer('categories_id')->unsigned();
             $table->string('title');
             $table->mediumText('Body')->nullable();
             $table->string('image_path');
@@ -27,7 +27,7 @@ class CreatePostsTable extends Migration
                     ->references('id')
                     ->on('users')
                     ->onDelete('cascade');
-            $table->foreign('category_id')
+            $table->foreign('categories_id')
                     ->references('id')
                     ->on('categories')
                     ->onDelete('cascade');

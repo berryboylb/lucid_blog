@@ -23,7 +23,7 @@
                             </div> 
                         @endforeach
                         @else
-                        <h2>No Categories</h2>
+                        <h2 class="no-story">No Categories</h2>
                     @endif
                     </div>
                 </div>
@@ -43,190 +43,158 @@
                 </div>
             </div>
             <div class="posts">
-                <div class="content">
-                   <div class="topics-people">
-                        <h3>Engineering</h3>
-                        <div class="people">
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Declan rice</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Tristan Mark</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Eddard Stark</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                <figcaption>Astard Collin</figcaption>
-                            </figure>
-                        </div>
-                   </div>
-                   <div class="blog-posts">
-                        <div class="main-content">
-                            <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
-                            <div class="content-visible">
-                                <h2>Declan Rice</h2>
-                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                <h3>The art of troubleshooting</h3>
-                                <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
-                            </div>
-                        </div>
-                        <div class="main-content">
-                            <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
-                            <div class="content-visible">
-                                <h2>Tristen Mark</h2>
-                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                <h3>Product design walk arounds</h3>
-                                <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
-                            </div>
-                       </div>
-                   </div>
+            @foreach ($Categories as $Category)
+            <div class="content">
+                <div class="topics-people">
+                     <h3>{{ $Category->category }}</h3>
+                     
+                     <div class="people">
+                         <figure>
+                             <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
+                             <figcaption>Declan rice</figcaption>
+                         </figure>
+                         <figure>
+                             <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
+                             <figcaption>Tristan Mark</figcaption>
+                         </figure>
+                         <figure>
+                             <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
+                             <figcaption>Eddard Stark</figcaption>
+                         </figure>
+                         <figure>
+                             <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
+                             <figcaption>Astard Collin</figcaption>
+                         </figure>
+                     </div>
                 </div>
 
-                <div class="content">
-                    <div class="topics-people">
-                         <h3>Technology</h3>
-                         <div class="people">
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Kevin Price</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Taylor Hunt</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>ED Mcaullen</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Haylee Lu</figcaption>
-                             </figure>
-                         </div>
-                    </div>
+                @forelse ($Category->posts as $Post )
                     <div class="blog-posts">
-                         <div class="main-content">
-                             <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
-                             <div class="content-visible">
-                                 <h2>Kevin Price</h2>
-                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                 <h3>The Future of embedded systems</h3>
-                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
-                             </div>
-                         </div>
-                         <div class="main-content">
-                             <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
-                             <div class="content-visible">
-                                 <h2>Haylee Lu</h2>
-                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                 <h3>Product design walk arounds</h3>
-                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
-                             </div>
-                        </div>
                         <div class="main-content">
-                            <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
-                            <div class="content-visible">
-                                <h2>Haylee Lu</h2>
-                                <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                <h3>Product design walk arounds</h3>
-                                <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
+                            <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
+                            <div class="content-visible" id="content-visible">
+                                <h2>{{ $Post->user->name ?? 'No name'}}</h2>
+                                <small>Created At  {{ $Post->created_at }} </small>
+                                <h3>{{ $Post->title }}</h3>
+                                <img id="{{ $Post->title }}" src="{{ asset('images/'. $Post->image_path) }}" alt="{{ asset('images/'. $Post->image_path) }}">
+                                <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="{{ $Post->title }}">
+                                        <div id="caption"></div>
+                                    </div>
+                                    
+                                    {{-- <script>
+                                        $('myModal').each
+                                    
+                                        var modal = document.querySelectorAll("myModal");
+                                        console.log(modal);
+                                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                        var img = modal.previousElementSibling;
+                                        console.log(img)
+                                        var modalImg = modal.firstElementChild.nextElementSibling;
+                                        console.log(modalImg)
+                                        var captionText = modal.firstElementChild.nextElementSibling.nextElementSibling;
+                                        console.log(captionText)
+                        
+                                        if(img.id == modalImg.id) {
+                                            console.log('shcbsdbc')
+                                            img.onclick = function(){
+                                            modal.style.display = "block";
+                                            modalImg.src = this.src;
+                                            captionText.innerHTML = this.alt;
+                                        }
+                                        }
+                                        // Get the <span> element that closes the modal
+                                        var span = document.getElementsByClassName("close")[0];
+                                        
+                                        // When the user clicks on <span> (x), close the modal
+                                        span.onclick = function() { 
+                                            modal.style.display = "none";
+                                        }
+                                        </script> --}}
+                                <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
+                                <div class="likes-comment-views">
+                                    <div class="bum">
+                                        <div class="bruh" id="bruh">
+                                            <input type="checkbox" id="{{ $Post->id }}" class ="like-checkbox"/>
+                                            <label for="{{ $Post->id }}">
+                                              <svg class="like-svg" id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                                                  <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
+                                                  <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5"/>
+                                        
+                                                  <g id="grp7" opacity="0" transform="translate(7 6)">
+                                                    <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
+                                                    <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp6" opacity="0" transform="translate(0 28)">
+                                                    <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
+                                                    <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp3" opacity="0" transform="translate(52 28)">
+                                                    <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2"/>
+                                                    <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp2" opacity="0" transform="translate(44 6)">
+                                                    <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2"/>
+                                                    <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp5" opacity="0" transform="translate(14 50)">
+                                                    <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2"/>
+                                                    <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp4" opacity="0" transform="translate(35 50)">
+                                                    <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2"/>
+                                                    <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2"/>
+                                                  </g>
+                                        
+                                                  <g id="grp1" opacity="0" transform="translate(24)">
+                                                    <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2"/>
+                                                    <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2"/>
+                                                  </g>
+                                                </g>
+                                              </svg>
+                                            </label>
+                                          </div>
+                                        <a href="">
+                                            <span> Likes</span>
+                                        </a>
+                                    </div>
+                                    <a href="">
+                                        <i class="far fa-comment-alt"></i>
+                                        <i class="far fa-eye"></i>
+                                        <span>Comments</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-eye"></i>
+                                        <span>Views {{ $Post->views }}</span>  
+                                    </a>
+                                </div>
                             </div>
-                       </div>
-                    </div>
-                 </div>
+                        </div>
+                   </div>
 
-                 <div class="content">
-                    <div class="topics-people">
-                         <h3>GitHub</h3>
-                         <div class="people">
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Kevin Price</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Taylor Hunt</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>ED Mcaullen</figcaption>
-                             </figure>
-                             <figure>
-                                 <img src="{{ asset('images/anonymous.jpg') }}" alt="Trulli" style="width:100%">
-                                 <figcaption>Haylee Lu</figcaption>
-                             </figure>
-                         </div>
-                    </div>
-                    <div class="blog-posts">
-                         <div class="main-content">
-                             <div class="profile-img"> <img src="{{ asset('images/anonymous.jpg') }}" alt=""></div>
-                             <div class="content-visible">
-                                 <h2>Kevin Price</h2>
-                                 <small>Created At  Jun 23rd, 2020 08:23 AM </small>
-                                 <h3>Learn Git</h3>
-                                 <img src="{{ asset('images/Rectangle 402.png') }}" alt="">
-                                 <p class="show-read-more">Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely nothing that woule come out from such endeavors and...</p>
-                             </div>
-                         </div>
-                    </div>
-                 </div>
+                   @empty
 
+                    <div class="error-log">
+                        <img src="{{ asset('images/oops.jpg') }}" alt="{{ asset('images/oops.jpg') }}">
+                        <h2 class="no-story">Ooops no post. Let's Create One <a href="/create">Create  Post</a></h2>
+                    </div>
+                @endforelse
+               
+             </div>
+            @endforeach
+             <script>
+                    $( "#myModal" ).each(function( index ) {
+                        console.log( index + ": " + $( this ).text() );
+                    });
+             </script>
             </div>
         </div>
     </section>
