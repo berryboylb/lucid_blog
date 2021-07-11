@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="home-sect">
+    <section class="home-sect maybe">
         <div class="container create-style">
-            <div class="first-section">
+            <div class="first-section" id="sidebar">
                 <div class="profile-container">
                     <img class="cover-img" src="{{ asset('images/Banner.png') }}" alt="{{ asset('images/Banner.png') }}">
 
@@ -362,5 +362,16 @@
                 </form>
             </div>
         </div>
+        <i class="far fa-bell" id="notify"></i>
+
+        <script>
+            const notify = document.querySelector('#notify');
+            const subscribe = document.querySelector(".suscribe");
+
+            notify.addEventListener('click', ()=>{
+                subscribe.classList.toggle('suscribe-new');
+                
+            })
+        </script>
     </section>
 @endsection

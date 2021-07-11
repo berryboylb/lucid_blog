@@ -136,7 +136,6 @@
         });
     </script>
     <script>
-        const close = document.querySelector('#close');
         var categories = document.querySelector('.checklist-settings');
        document.addEventListener('touchstart', handleTouchStart, false);        
         document.addEventListener('touchmove', handleTouchMove, false);
@@ -164,7 +163,7 @@
                 if ( xDiff > 0 ) {
                     /* left swipe */ 
                     console.log('left swipe');
-                    var categories = document.querySelector('.checklist-settings');
+                    var categories = document.querySelector('#sidebar');
                     if (categories.style.display != "none" ){
                         categories.style.display = "none";         
                     }
@@ -172,17 +171,7 @@
                 } else {
                     /* right swipe */
                     console.log('right swipe');
-                    var categories = document.querySelector('.checklist-settings');
-
-                    // if(document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
-                    //     categories.style.top = "0vh";
-                    //     categories.style.height = "100vh";
-                    // }
-                    // if(document.documentElement.scrollTop < 0 || document.body.scrollTop < 0){
-                    //     categories.style.top = "8vh";
-                    //     categories.style.height = "92vh";
-                    // }
-
+                    var categories = document.querySelector('#sidebar');
                     if (categories.style.display = "none" ){
                         categories.style.display = "block";
                         let tl = gsap.timeline({defaults:{duration: 1.5}});
@@ -203,15 +192,6 @@
             yDown = null;                                             
         };
 
-        const newFunction = () => {
-           close.addEventListener('click', ()=> {
-               if(categories.style.display != "none"){
-                categories.style.display = "none";
-               }
-           }) 
-        }
-
-        newFunction();
     </script>
 </body>
 </html>
