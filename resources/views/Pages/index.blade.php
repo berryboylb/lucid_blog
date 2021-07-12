@@ -72,8 +72,8 @@
                         <div class="main-content">
                             <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible" id="content-visible">
-                                <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event,'{{ $Post->id }}')"></i>
-                                <div class="float-right" id="{{ $Post->id }}">
+                                <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
+                                <div class="float-right">
                                    <div class="edit">
                                     <a href="/{{ $Post->id }}/edit">Edit</a>
                                    </div>
@@ -208,25 +208,14 @@
             </div>
         </div>
         <script>
-            function editDelete(evt, id){
-                setTimeout(function() {
+            function editDelete(evt){
                     var editAndDeleteBtn = document.getElementsByClassName('fa-ellipsis-v');
                     var floatRight = document.getElementsByClassName('float-right');
                     var i;
-                    for( i = 0; i < floatRight.length; i++){
-                        floatRight[i].style.display = "none";
-                    }
-                    for( i =0; i < editAndDeleteBtn.length; i++){
-                        editAndDeleteBtn[i].className =  editAndDeleteBtn[i].className.replace(" active", "");
-                    }
-                    document.getElementById(id).style.display = "flex";
-                    evt.currentTarget.className += " active";
+                    //document.getElementById(id).style.display = "flex";
+                    //evt.currentTarget.className += " active";
+                    evt.currentTarget.nextElementSibling.classList.toggle('show');
                     console.log('hi');
-
-                // Array.from(editAndDeleteBtn).forEach((i)=> {
-                //     //console.log(i);
-                // })
-            }, 1000)
             }
         </script>
     </section>
