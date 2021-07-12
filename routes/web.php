@@ -19,4 +19,4 @@ use App\Http\Controllers\PagesController;
 // });
 
 //Route::get('/', [PagesController::class, 'index']);
-Route::resource('/', 'App\Http\Controllers\PostController');
+Route::resource('/bars', 'App\Http\Controllers\PostController');

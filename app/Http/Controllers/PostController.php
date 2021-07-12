@@ -107,10 +107,18 @@ class PostController extends Controller
     public function show($id)
 
     {
-        dd($id);
-        // $Post = Post::find(id);
+        $links = Link::all();
+        $Categories = Categories::all();
+        $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
+        
+         //$Posts = Posts::find($id);
+         //dd($id);
 
-        // return view('Pages.show')->with('Post',$Post);
+        return view('Pages.show', [
+            'links' => $links,
+            'Ui_designs'=> $Ui_designs,
+            'Categories' => $Categories,
+        ]);
     }
 
     /**
@@ -121,7 +129,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd($id);
     }
 
     /**

@@ -75,7 +75,7 @@
                                 <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
                                 <div class="float-right">
                                    <div class="edit">
-                                    <a href="/{{ $Post->id }}/edit">Edit</a>
+                                    <a href="bars/{{ $Post->id }}/edit">Edit</a>
                                    </div>
                 
                                     <form action="/{{ $Post->id }}" class="pt-3" method="post">
