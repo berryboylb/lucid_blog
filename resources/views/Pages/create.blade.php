@@ -191,8 +191,13 @@
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
-                                <img src="{{ asset('images/'. $Post->image_path) }}" alt="">
-
+                                <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="{{ $Post->title }}">
+                                        <div id="caption"></div>
+                                    </div>
                                 <div class="likes-comment-views">
                                     <div class="bum">
                                         <div class="bruh" id="bruh">
@@ -268,14 +273,19 @@
                      <div class="profile-posts">
                         <div class="main-content">
                             <h2 class="create-category">{{ $Category->category }}</h2>
-                            <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
+                            <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>{{ $Post->user->name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
-                                <img src="{{ asset('images/'. $Post->image_path) }}" alt="">
-
+                                <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="{{ $Post->title }}">
+                                        <div id="caption"></div>
+                                    </div>
                                 <div class="likes-comment-views">
                                     <a href="">
                                         <i class="far fa-heart"></i>
@@ -304,14 +314,19 @@
                      <div class="profile-posts">
                         <div class="main-content">
                             <h2 class="create-category">{{ $Category->category }}</h2>
-                            <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
+                            <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>{{ $Post->user->name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
-                                <img src="{{ asset('images/'. $Post->image_path) }}" alt="">
-
+                                <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="{{ $Post->title }}">
+                                        <div id="caption"></div>
+                                    </div>
                                 <div class="likes-comment-views">
                                     <a href="">
                                         <i class="far fa-heart"></i>
@@ -372,6 +387,20 @@
                 subscribe.classList.toggle('suscribe-new');
                 
             })
+
+            function modal(evt){
+            var img = evt.currentTarget;
+            var modal = img.nextElementSibling;
+            var modalImg = modal.firstElementChild.nextElementSibling;
+            var captionText = modal.firstElementChild.nextElementSibling.nextElementSibling;
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+            var span = modal.firstElementChild;
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+            }
         </script>
     </section>
 @endsection

@@ -91,7 +91,7 @@
                                 <h2>{{ $Post->user->name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
-                                <img id="{{ $Post->title }}" src="{{ asset('images/'. $Post->image_path) }}" alt="{{ asset('images/'. $Post->image_path) }}">
+                                <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="{{ asset('images/'. $Post->image_path) }}" >
                                 <!-- The Modal -->
                                     <div id="myModal" class="modal">
                                         <span class="close">&times;</span>
@@ -99,35 +99,7 @@
                                         <div id="caption"></div>
                                     </div>
                                     
-                                    {{-- <script>
-                                        $('myModal').each
                                     
-                                        var modal = document.querySelectorAll("myModal");
-                                        console.log(modal);
-                                        // Get the image and insert it inside the modal - use its "alt" text as a caption
-                                        var img = modal.previousElementSibling;
-                                        console.log(img)
-                                        var modalImg = modal.firstElementChild.nextElementSibling;
-                                        console.log(modalImg)
-                                        var captionText = modal.firstElementChild.nextElementSibling.nextElementSibling;
-                                        console.log(captionText)
-                        
-                                        if(img.id == modalImg.id) {
-                                            console.log('shcbsdbc')
-                                            img.onclick = function(){
-                                            modal.style.display = "block";
-                                            modalImg.src = this.src;
-                                            captionText.innerHTML = this.alt;
-                                        }
-                                        }
-                                        // Get the <span> element that closes the modal
-                                        var span = document.getElementsByClassName("close")[0];
-                                        
-                                        // When the user clicks on <span> (x), close the modal
-                                        span.onclick = function() { 
-                                            modal.style.display = "none";
-                                        }
-                                        </script> --}}
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
                                 <div class="likes-comment-views">
                                     <div class="bum">
@@ -209,13 +181,21 @@
         </div>
         <script>
             function editDelete(evt){
-                    var editAndDeleteBtn = document.getElementsByClassName('fa-ellipsis-v');
-                    var floatRight = document.getElementsByClassName('float-right');
-                    var i;
-                    //document.getElementById(id).style.display = "flex";
-                    //evt.currentTarget.className += " active";
                     evt.currentTarget.nextElementSibling.classList.toggle('show');
-                    console.log('hi');
+            }
+
+            function modal(evt){
+            var img = evt.currentTarget;
+            var modal = img.nextElementSibling;
+            var modalImg = modal.firstElementChild.nextElementSibling;
+            var captionText = modal.firstElementChild.nextElementSibling.nextElementSibling;
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+            var span = modal.firstElementChild;
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
             }
         </script>
     </section>
