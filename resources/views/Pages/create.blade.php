@@ -184,6 +184,22 @@
                      @foreach ($Category->posts as $Post )
                      <div class="profile-posts">
                         <div class="main-content">
+                            <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
+                            <div class="float-right">
+                               <div class="edit">
+                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                               </div>
+            
+                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button
+                                    class="border-b-2 pb-2 border-dotted italic text-red-500" 
+                                     type="submit">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
@@ -272,6 +288,22 @@
                      @foreach ($Category->posts as $Post )
                      <div class="profile-posts">
                         <div class="main-content">
+                            <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
+                            <div class="float-right">
+                               <div class="edit">
+                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                               </div>
+            
+                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button
+                                    class="border-b-2 pb-2 border-dotted italic text-red-500" 
+                                     type="submit">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
@@ -313,6 +345,22 @@
                      @foreach ($Category->posts as $Post )
                      <div class="profile-posts">
                         <div class="main-content">
+                            <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
+                            <div class="float-right">
+                               <div class="edit">
+                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                               </div>
+            
+                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button
+                                    class="border-b-2 pb-2 border-dotted italic text-red-500" 
+                                     type="submit">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
@@ -387,6 +435,10 @@
                 subscribe.classList.toggle('suscribe-new');
                 
             })
+
+            function editDelete(evt){
+                    evt.currentTarget.nextElementSibling.classList.toggle('show');
+            }
 
             function modal(evt){
             var img = evt.currentTarget;

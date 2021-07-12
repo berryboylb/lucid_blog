@@ -2286,7 +2286,7 @@ footer .footer-inner ul li a:hover {
 
 .float-right {
   position: absolute;
-  width: 10%;
+  width: 15%;
   right: 2%;
   top: 0;
   transition: 2s;
@@ -2297,6 +2297,7 @@ footer .footer-inner ul li a:hover {
   background: #FFFFFF;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  z-index: 99;
 }
 .float-right .edit {
   width: 100%;
