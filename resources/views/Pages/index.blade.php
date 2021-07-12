@@ -205,11 +205,6 @@
                
              </div>
             @endforeach
-             <script>
-                    $( "#myModal" ).each(function( index ) {
-                        console.log( index + ": " + $( this ).text() );
-                    });
-             </script>
             </div>
         </div>
     </section>

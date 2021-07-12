@@ -2416,3 +2416,54 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    #edit-delete { 
+        font-size: 12px;
+    }
+    .float-right {
+        width: 15%;
+    
+        .edit {
+            padding: 3%;
+    
+            a {
+                font-size: 12px;
+            }
+        }
+    
+        form {
+            padding: 3%;
+            
+            button {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #edit-delete { 
+        font-size: 12px;
+    }
+    .float-right {
+        width: 20%;
+        right: 3%;
+    
+        .edit {
+            padding: 3%;
+    
+            a {
+                font-size: 12px;
+            }
+        }
+    
+        form {
+            padding: 3%;
+            
+            button {
+                font-size: 12px;
+            }
+        }
+    }
+}

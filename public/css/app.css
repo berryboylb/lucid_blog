@@ -2335,3 +2335,47 @@ footer .footer-inner ul li a:hover {
 .float-right form button:hover {
   opacity: 1;
 }
+
+@media screen and (max-width: 1024px) {
+  #edit-delete {
+    font-size: 12px;
+  }
+
+  .float-right {
+    width: 15%;
+  }
+  .float-right .edit {
+    padding: 3%;
+  }
+  .float-right .edit a {
+    font-size: 12px;
+  }
+  .float-right form {
+    padding: 3%;
+  }
+  .float-right form button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #edit-delete {
+    font-size: 12px;
+  }
+
+  .float-right {
+    width: 20%;
+    right: 3%;
+  }
+  .float-right .edit {
+    padding: 3%;
+  }
+  .float-right .edit a {
+    font-size: 12px;
+  }
+  .float-right form {
+    padding: 3%;
+  }
+  .float-right form button {
+    font-size: 12px;
+  }
+}
