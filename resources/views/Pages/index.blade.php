@@ -72,6 +72,22 @@
                         <div class="main-content">
                             <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible" id="content-visible">
+                                <i class="fas fa-ellipsis-v" id="edit-delete"></i>
+                                <div class="float-right">
+                                   <div class="edit">
+                                    <a href="/{{ $Post->id }}/edit">Edit</a>
+                                   </div>
+                
+                                    <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button
+                                        class="border-b-2 pb-2 border-dotted italic text-red-500" 
+                                         type="submit">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </div>
                                 <h2>{{ $Post->user->name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>

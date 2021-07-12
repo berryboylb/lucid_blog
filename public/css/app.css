@@ -142,6 +142,7 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   display: none;
+  transition: 2s;
 }
 
 .activate-dropdown {
@@ -623,6 +624,7 @@ footer .footer-inner ul li a:hover {
 }
 .home-style .posts .content .blog-posts {
   width: 100%;
+  position: relative;
 }
 .home-style .posts .content .blog-posts .main-content {
   margin-top: 0%;
@@ -2273,4 +2275,63 @@ footer .footer-inner ul li a:hover {
   .user-details .profile-img-con img {
     margin-top: 15%;
   }
+}
+#edit-delete {
+  position: absolute;
+  right: 0;
+  top: 1%;
+  font-size: 14px;
+  color: #871E99;
+}
+
+.float-right {
+  position: absolute;
+  width: 10%;
+  right: 2%;
+  top: 0;
+  transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.float-right .edit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.float-right .edit a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #871E99;
+  font-size: 600;
+  opacity: 0.7;
+}
+.float-right .edit a:hover {
+  opacity: 1;
+}
+.float-right form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.float-right form button {
+  outline: none;
+  border: none;
+  background: none;
+  color: #871E99;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.7;
+}
+.float-right form button:hover {
+  opacity: 1;
 }
