@@ -100,7 +100,7 @@
 
             </div>
             <div class="posts-one">
-                <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
+                <i class="fas fa-ellipsis-v" id="edit-delete-show" onclick="editDelete(event)"></i>
                 <div class="float-right">
                     <div class="edit">
                         <a href="">Edit</a>
@@ -116,10 +116,10 @@
                     </button>
                 </form>
             </div>
-                <div class="main">
-                    <h2><span>Home</span>/<span>Blog</span> /Pyschology of the Mind</h2>
-                    <small>Published on Jun 3rd, 2020 02:25 PM</small>
-                    <p>I am so into psychology of the mind and body these days. Sometimes I wonder if the disconnect between what I am studying in the university and where my interest lies, is the factor behind my procrastination and lackadaisical attitude to important tasks before me.
+                <div class="main-one">
+                    <h2><span>Home</span>/ <span>Blog</span> /Pyschology of the Mind</h2>
+                    <small class="published">Published on Jun 3rd, 2020 02:25 PM</small>
+                    <p class="text">I am so into psychology of the mind and body these days. Sometimes I wonder if the disconnect between what I am studying in the university and where my interest lies, is the factor behind my procrastination and lackadaisical attitude to important tasks before me.
 
                         Okay, enough of the ramblings, this should be about what I learn so far and what I wish to learn. First off I'll start with psychology before delving to engineering.
                         
@@ -135,8 +135,15 @@
                         Then came digital calculators, I can spend hours just pressing random buttons and watching the display, then the advent of desktop computers, we use to play games and all what not. Later on came the mobile hand held devices, the cell phones mostly. To this day, I can zone out for hours reading about trends in technology, history and engineering marvels without getting bored.
                         
                         And then when I got admitted to study Electrical Engineering, I found programming and fell in love. I am still a beginner though and have learnt over the course of asking around and reading the lives and journeys of computer programmers, especially the ones in Nigeria here that every little project and work counts to ones advantage and so I am using this forthcoming internship to meet people, learn and contribute as well.</p>
+                        <img class="content-img" onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt="">
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content">
+                                        <div id="caption"></div>
+                                    </div>
                         <div class="social-likes">
-                            <div class="likes-comment-views">
+                            <div class="likes-comment">
                                 <div class="bum">
                                     <div class="bruh" id="bruh">
                                         <input type="checkbox" id="me" class ="like-checkbox"/>
@@ -210,7 +217,7 @@
 
                         <div class="comment-box">
                             <form action="">
-                                <textarea name="comment"></textarea>
+                                <textarea name="comment" placeholder="Write a comment..."></textarea>
                                 <button type="Submit">Comment</button>
                             </form>
                         </div>
