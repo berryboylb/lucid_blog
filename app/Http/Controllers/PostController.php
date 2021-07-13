@@ -111,6 +111,10 @@ class PostController extends Controller
         //dd($id);
 
         $Posts = Posts::find($id);
+        $cat_id = $Posts->categories_id;
+        $findCatName = Categories::find($cat_id);
+        $CategoryName = $findCatName->category;
+        // dd($findCatName->category);
         $links = Link::all();
         $Categories = Categories::all();
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
@@ -123,6 +127,7 @@ class PostController extends Controller
             'Ui_designs'=> $Ui_designs,
             'Categories' => $Categories,
             'Posts' => $Posts,
+            'CategoryName'=> $CategoryName,
         ]);
     }
 
