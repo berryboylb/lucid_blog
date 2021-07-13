@@ -2697,6 +2697,7 @@ footer {
             color: #FFFFFF;
             padding: 2%;
             width: 20%;
+            border-radius: 3px;
         }
 
         button:hover {
@@ -2919,45 +2920,18 @@ footer {
     }
     
     .main-one .social-likes  {
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
      .likes-comment {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 30%;
+        width: 50%;
     
         a {
-            display: block;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif;
-            font-size: 12px;
-            color: rgba(135, 30, 153, 0.83);
-            opacity: 0.7;
-            cursor: pointer;
-        }
-    
-        a:hover {
-            opacity: 1;
+            font-size: 8px;
         }
     }
     
     .bum {
-        display: flex;
-        align-items: center;
     
         i {
-            display: block;
-            font-size: 12px;
-            color: rgba(135, 30, 153, 0.83);
-            opacity: 0.7; 
-        }
-    
-        a {
-            margin-left: 5%;
-            cursor: pointer;
+            font-size: 8px;
         }
     }
     
@@ -2965,30 +2939,18 @@ footer {
     }
     
     .main-one .socials {
-        border: 10%;
-        width: 10%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 30%;
     
         .fa-linkedin {
-            color: #0e76a8;
-            font-size: 18px;
+            font-size: 14px;
         }
     
         .fa-twitter {
-            color: #00acee;
-            font-size: 18px;
+            font-size: 14px;
         }
     
         .fa-facebook-square {
-            color: rgb(66, 103, 178);
-            font-size: 18px;
-        }
-    
-        i:hover {
-            opacity: 0.7;
-           
+            font-size: 14px;
         }
     }
     
@@ -2996,109 +2958,69 @@ footer {
         width: 100%;
         margin-top: 5%;
         form {
-            width: 100%;
             
             textarea {
-                width: 100%;
-                background: none;
-                resize: none;
-    
-                border: 1px solid #871E99;
-                border-radius: 5px;
-                padding: 1%;
-                outline: none;
-                height: 200px;
-                font-size: 14px;
+                padding: 2%;
+                font-size: 12px;
+                height: 150px;
             }
     
             button {
-                margin-left: 80%;
-                margin-top: 3%;
-                background: #871E99;
-                border: none;
-                outline: none;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 500;
-                font-size: 14px;
-                color: #FFFFFF;
-                padding: 2%;
-                width: 20%;
-            }
-    
-            button:hover {
-                background: none;
-                border:  1px solid #871E99;
-                color:  #871E99;
+                margin-left: 0%;
+                padding: 3%;
+                width: 100%;
             }
         }
     }
     
     .comments {
-        width: 100%;
-        margin-top: 2%;
+        margin-top: 5%;
     }
     
     .comments h3 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        color: #000000;
+        font-size: 14px;
     }
     
     .one-person-comment {
-        display: flex;
-        justify-content: space-between;
-        //align-items: center;
-        margin-top: 2%;
+        margin-top: 3%;
     
         .comment-img {
             width: 10%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
             
             img {
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
             }
         }
     
         .brave {
             width: 90%;
-            padding: 1%;
+            padding: 1.5%;
     
             .name-time{
                 display: flex;
                 align-items: center;
-                margin-top: 1%;
+                margin-top: 0%;
                 width: 100%;
     
                 h4 {
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 700;
-                    font-size: 18px;
-                    color: #871E99;
+                    font-size: 14px;
     
                 }
     
                 small {
-                    margin-left: 2%;
-                    color: rgba(0, 0, 0, 0.42);
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 9px;
+                    margin-left: 3%;
+                    font-size: 6px;
                 }
             }
     
             .the-comment {
                 width: 100%;
-                margin-top: 1%;
+                margin-top: 2%;
                 
                 p {
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 14px;
-                    color: #29092F;
-                    line-height: 1.7;
+                    font-size: 11px;
                 }
             }
         }
