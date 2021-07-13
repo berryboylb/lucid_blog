@@ -2656,3 +2656,260 @@ footer .footer-inner ul li a:hover {
   color: #29092F;
   line-height: 1.7;
 }
+
+@media screen and (max-width: 1024px) {
+  #edit-delete-show {
+    top: 2%;
+    font-size: 12px;
+  }
+
+  .float-right-show {
+    top: 2%;
+  }
+  .float-right-show .edit a {
+    font-size: 12px;
+  }
+  .float-right-show form button {
+    font-size: 12px;
+  }
+
+  .main-one h2 {
+    font-size: 16px;
+  }
+
+  .main-one .published {
+    font-size: 14px;
+  }
+
+  .main-one .text {
+    font-size: 12px;
+  }
+
+  .main-one .content-img {
+    height: 200px;
+  }
+
+  .main-one .socials {
+    width: 15%;
+  }
+
+  .main-one .social-likes .likes-comment a {
+    font-size: 10px;
+  }
+  .main-one .social-likes .bum i {
+    font-size: 10px;
+  }
+
+  .comment-box form textarea {
+    padding: 2%;
+    font-size: 12px;
+  }
+  .comment-box form button {
+    font-size: 12px;
+  }
+
+  .comments h3 {
+    font-size: 16px;
+  }
+
+  .one-person-comment .brave .name-time h4 {
+    font-size: 16px;
+  }
+  .one-person-comment .brave .name-time small {
+    font-size: 7px;
+  }
+  .one-person-comment .brave .the-comment p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .posts-one {
+    width: 100%;
+  }
+
+  #edit-delete-show {
+    top: 1%;
+    font-size: 12px;
+  }
+
+  .float-right-show {
+    top: 1%;
+    width: 20%;
+  }
+
+  .main-one h2 {
+    font-size: 14px;
+  }
+
+  .main-one .published {
+    font-size: 10px;
+  }
+
+  .main-one .text {
+    font-size: 12px;
+  }
+
+  .main-one .content-img {
+    height: 150px;
+  }
+
+  .main-one .social-likes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-one .social-likes .likes-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+  }
+  .main-one .social-likes .likes-comment a {
+    display: block;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: rgba(135, 30, 153, 0.83);
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .main-one .social-likes .likes-comment a:hover {
+    opacity: 1;
+  }
+  .main-one .social-likes .bum {
+    display: flex;
+    align-items: center;
+  }
+  .main-one .social-likes .bum i {
+    display: block;
+    font-size: 12px;
+    color: rgba(135, 30, 153, 0.83);
+    opacity: 0.7;
+  }
+  .main-one .social-likes .bum a {
+    margin-left: 5%;
+    cursor: pointer;
+  }
+
+  .main-one .socials {
+    border: 10%;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-one .socials .fa-linkedin {
+    color: #0e76a8;
+    font-size: 18px;
+  }
+  .main-one .socials .fa-twitter {
+    color: #00acee;
+    font-size: 18px;
+  }
+  .main-one .socials .fa-facebook-square {
+    color: #4267b2;
+    font-size: 18px;
+  }
+  .main-one .socials i:hover {
+    opacity: 0.7;
+  }
+
+  .comment-box {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .comment-box form {
+    width: 100%;
+  }
+  .comment-box form textarea {
+    width: 100%;
+    background: none;
+    resize: none;
+    border: 1px solid #871E99;
+    border-radius: 5px;
+    padding: 1%;
+    outline: none;
+    height: 200px;
+    font-size: 14px;
+  }
+  .comment-box form button {
+    margin-left: 80%;
+    margin-top: 3%;
+    background: #871E99;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 2%;
+    width: 20%;
+  }
+  .comment-box form button:hover {
+    background: none;
+    border: 1px solid #871E99;
+    color: #871E99;
+  }
+
+  .comments {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .comments h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  .one-person-comment {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  .one-person-comment .comment-img {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .one-person-comment .comment-img img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .one-person-comment .brave {
+    width: 90%;
+    padding: 1%;
+  }
+  .one-person-comment .brave .name-time {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    width: 100%;
+  }
+  .one-person-comment .brave .name-time h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #871E99;
+  }
+  .one-person-comment .brave .name-time small {
+    margin-left: 2%;
+    color: rgba(0, 0, 0, 0.42);
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+  }
+  .one-person-comment .brave .the-comment {
+    width: 100%;
+    margin-top: 1%;
+  }
+  .one-person-comment .brave .the-comment p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #29092F;
+    line-height: 1.7;
+  }
+}
