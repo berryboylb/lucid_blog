@@ -139,7 +139,15 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        dd($id);
+        $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
+        $links = Link::all();
+        $Posts = Posts::find($id);
+        
+        return view('Pages.edit', [
+            'Ui_designs'=> $Ui_designs,
+            'links' => $links,
+            'Posts' => $Posts,
+        ]);
     }
 
     /**
