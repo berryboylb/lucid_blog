@@ -2400,29 +2400,29 @@ footer .footer-inner ul li a:hover {
   color: #871E99;
 }
 
-#more-bro {
+.float-right-show {
   position: absolute;
   width: 15%;
-  right: 6%;
-  top: 0;
+  right: 7%;
+  top: 3%;
   transition: 2s;
   display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: pink;
+  background: #fff;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   z-index: 99;
 }
-#more-bro .edit {
+.float-right-show .edit {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2%;
 }
-#more-bro .edit a {
+.float-right-show .edit a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -2430,17 +2430,17 @@ footer .footer-inner ul li a:hover {
   font-size: 600;
   opacity: 0.7;
 }
-#more-bro .edit a:hover {
+.float-right-show .edit a:hover {
   opacity: 1;
 }
-#more-bro form {
+.float-right-show form {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2%;
 }
-#more-bro form button {
+.float-right-show form button {
   outline: none;
   border: none;
   background: none;
@@ -2449,8 +2449,12 @@ footer .footer-inner ul li a:hover {
   font-family: "Poppins", sans-serif;
   opacity: 0.7;
 }
-#more-bro form button:hover {
+.float-right-show form button:hover {
   opacity: 1;
+}
+
+.dow {
+  display: flex;
 }
 
 .main-one {

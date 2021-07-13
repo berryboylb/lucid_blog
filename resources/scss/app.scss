@@ -2488,18 +2488,17 @@ footer {
     font-size: 14px;
     color: #871E99;
 }
-
- #more-bro {
+.float-right-show {
     position: absolute;
     width: 15%;
-    right: 6%;
-    top: 0;
+    right: 7%;
+    top: 3%;
     transition: 2s;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: pink;
+    background: #fff;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     z-index: 99;
@@ -2546,6 +2545,10 @@ footer {
             opacity: 1;
         }
     }
+}
+
+.dow {
+    display: flex;
 }
 
 .main-one {

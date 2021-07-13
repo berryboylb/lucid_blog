@@ -100,8 +100,8 @@
 
             </div>
             <div class="posts-one">
-                <i class="fas fa-ellipsis-v" id="edit-delete-show" onclick="editDelete(event)"></i>
-                <div class="float-right">
+                <i class="fas fa-ellipsis-v" id="edit-delete-show" onclick="editDeleteShow(event)"></i>
+                <div class="float-right-show">
                     <div class="edit">
                         <a href="">Edit</a>
                     </div>
@@ -243,8 +243,9 @@
             </div>
         </div>
         <script>
-            function editDelete(evt){
-                    evt.currentTarget.nextElementSibling.classList.toggle('show');
+            function editDeleteShow(evt){
+                   evt.currentTarget.nextElementSibling.classList.toggle('dow');
+                    //console.log( evt.currentTarget.nextElementSibling)
             }
 
             function modal(evt){
