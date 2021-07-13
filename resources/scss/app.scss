@@ -838,19 +838,22 @@ footer {
                                 line-height: 2;
                                 color: #29092F;
                                 margin-top: 2%;
+                                display: inline-block;
+                               margin-bottom: 2%;
+                            }
 
-                                a {
-                                    text-decoration: none;
-                                    background: #871E99;
-                                    color: #fff;
-                                    font-family: 'Open Sans', sans-serif;
-                                    padding: 5px;
-                                    border-radius: 5px;
-                                }
+                            .beamer {
+                                text-decoration: none;
+                                background: #871E99;
+                                color: #fff;
+                                font-family: 'Open Sans', sans-serif;
+                                padding: 5px;
+                                border-radius: 5px;
+                                font-size: 14px;
+                            }
 
-                                a:hover {
-                                    background: #50115A;
-                                }
+                            .beamer:hover {
+                                background: #50115A;
                             }
                     }
 
@@ -970,9 +973,12 @@ footer {
                             line-height: 2.3 !important;
                             margin-top: 2.3% !important;
 
-                            a {
-                                padding: 3px !important;
-                            }
+                            
+                        }
+
+                        .beamer {
+                            padding: 3px !important;
+                            font-size: 10px;
                         }
                     }
                 }
@@ -1065,9 +1071,12 @@ footer {
                         line-height: 2.3 !important;
                         margin-top: 2.3% !important;
 
-                        a {
-                            padding: 3px !important;
-                        }
+                        
+                    }
+
+                    .beamer {
+                        padding: 3px !important;
+                        font-size: 10px !important;
                     }
                 }
             }

@@ -100,7 +100,8 @@
                                     </div>
                                     
                                     
-                                <p class="show-read-more"> {{ $Post->Body }} <a href="/bars/{{ $Post->id }}">Read More</a></p>
+                                <p class="show-read-more"> {{ $Post->Body}}</p>
+                                <a class="beamer" href="/bars/{{ $Post->id }}">Read More</a>
                                 <div class="likes-comment-views">
                                     <div class="bum">
                                         <div class="bruh" id="bruh">

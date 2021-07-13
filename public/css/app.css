@@ -685,16 +685,19 @@ footer .footer-inner ul li a:hover {
   line-height: 2;
   color: #29092F;
   margin-top: 2%;
+  display: inline-block;
+  margin-bottom: 2%;
 }
-.home-style .posts .content .blog-posts .main-content .content-visible p a {
+.home-style .posts .content .blog-posts .main-content .content-visible .beamer {
   text-decoration: none;
   background: #871E99;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   padding: 5px;
   border-radius: 5px;
+  font-size: 14px;
 }
-.home-style .posts .content .blog-posts .main-content .content-visible p a:hover {
+.home-style .posts .content .blog-posts .main-content .content-visible .beamer:hover {
   background: #50115A;
 }
 
@@ -770,8 +773,9 @@ footer .footer-inner ul li a:hover {
     line-height: 2.3 !important;
     margin-top: 2.3% !important;
   }
-  .posts .content .blog-posts .main-content .content-visible p a, .posts .content .profile-posts .main-content .content-visible p a {
+  .posts .content .blog-posts .main-content .content-visible .beamer, .posts .content .profile-posts .main-content .content-visible .beamer {
     padding: 3px !important;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -838,8 +842,9 @@ footer .footer-inner ul li a:hover {
     line-height: 2.3 !important;
     margin-top: 2.3% !important;
   }
-  .home-sect .posts .main-content .content-visible p a {
+  .home-sect .posts .main-content .content-visible .beamer {
     padding: 3px !important;
+    font-size: 10px !important;
   }
 }
 .error-log {
