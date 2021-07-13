@@ -223,20 +223,20 @@
                         </div>
 
                         <div class="comments">
-                            <h2>Comments:</h2>
+                            <h3>Comments:</h3>
                             <div class="one-person-comment">
-                                <div class="comment-img">
-                                    <img src="{{ asset('profile_pictures/Ellipse 9.png') }}" alt="">
-                                </div>
-                                <div class="comment-content">
-                                    <div class="name-time">
-                                        <h3>Emily shody</h3>
-                                        <small> <i class="fas fa-eye"></i></i> 3 mins ago</small>
+                                    <div class="comment-img">
+                                        <img src="{{ asset('profile_pictures/Ellipse 9.png') }}" alt="">
                                     </div>
-                                    <div class="the-comment">
-                                        <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely </p>
+                                    <div class="brave">
+                                        <div class="name-time">
+                                            <h4>Emily shody</h4>
+                                            <small> <i class="fas fa-eye"></i></i> 3 mins ago</small>
+                                        </div>
+                                        <div class="the-comment">
+                                            <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely </p>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                 </div>

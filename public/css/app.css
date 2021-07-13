@@ -2591,3 +2591,64 @@ footer .footer-inner ul li a:hover {
   border: 1px solid #871E99;
   color: #871E99;
 }
+
+.comments {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.comments h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+}
+
+.one-person-comment {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.one-person-comment .comment-img {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.one-person-comment .comment-img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.one-person-comment .brave {
+  width: 90%;
+  padding: 1%;
+}
+.one-person-comment .brave .name-time {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  width: 100%;
+}
+.one-person-comment .brave .name-time h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #871E99;
+}
+.one-person-comment .brave .name-time small {
+  margin-left: 2%;
+  color: rgba(0, 0, 0, 0.42);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+.one-person-comment .brave .the-comment {
+  width: 100%;
+  margin-top: 1%;
+}
+.one-person-comment .brave .the-comment p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #29092F;
+  line-height: 1.7;
+}
