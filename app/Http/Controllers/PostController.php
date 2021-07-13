@@ -107,6 +107,10 @@ class PostController extends Controller
     public function show($id)
 
     {
+
+        //dd($id);
+
+        $Posts = Posts::find($id);
         $links = Link::all();
         $Categories = Categories::all();
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
@@ -118,6 +122,7 @@ class PostController extends Controller
             'links' => $links,
             'Ui_designs'=> $Ui_designs,
             'Categories' => $Categories,
+            'Posts' => $Posts,
         ]);
     }
 

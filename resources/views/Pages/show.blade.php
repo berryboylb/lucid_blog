@@ -117,25 +117,10 @@
                 </form>
             </div>
                 <div class="main-one">
-                    <h2><span>Home</span>/ <span>Blog</span> /Pyschology of the Mind</h2>
-                    <small class="published">Published on Jun 3rd, 2020 02:25 PM</small>
-                    <p class="text">I am so into psychology of the mind and body these days. Sometimes I wonder if the disconnect between what I am studying in the university and where my interest lies, is the factor behind my procrastination and lackadaisical attitude to important tasks before me.
-
-                        Okay, enough of the ramblings, this should be about what I learn so far and what I wish to learn. First off I'll start with psychology before delving to engineering.
-                        
-                        If you want something, ask for it, never hold grudge against someone, if someone offend you, call him out and say your grievance.
-                        Make your bed each morning before leaving the house.Imagine returning from tiring day and you see mess all over your bed room. This has made me feel the effect of little accomplishments. Whenever I make my bed first thing, I become happier and with some sense of accomplishment.
-                        Want to defeat a narcissist who insults you? Don't react. Just ignore him completely in front of others. It will hurt his image and he will stop poking you.
-                        Want to feel confident? When meeting someone just assume you have everything which other person wants in/from you. It will be enough to seal the deal. This has also helped me long the way.
-                        Want to complete something? Convince your brain to start the work. Once you start doing it, you will find it interesting and you will complete it.
-                        I call the last one, the 5 seconds hack, it has increase my confidence in the sense that, I've been a shy guy in the past not able to strike a conversation with random people, but nowadays the moment the thought of talking to someone around me comes to mind, before the 5 seconds window elapse, I will initiate a conversation, doesn't matter what will come out of my mouth, just talk and take things further from there, works every time, especially approaching ladies.
-                        
-                        And then let's talk a bit about my Engineering side, I am a student of Electrical Engineering and ever since I was in primary school, I've been fascinated with cellphones of those days, how they convey sound from a place to another through cables, towers and free air as I use to say it those days.
-                        
-                        Then came digital calculators, I can spend hours just pressing random buttons and watching the display, then the advent of desktop computers, we use to play games and all what not. Later on came the mobile hand held devices, the cell phones mostly. To this day, I can zone out for hours reading about trends in technology, history and engineering marvels without getting bored.
-                        
-                        And then when I got admitted to study Electrical Engineering, I found programming and fell in love. I am still a beginner though and have learnt over the course of asking around and reading the lives and journeys of computer programmers, especially the ones in Nigeria here that every little project and work counts to ones advantage and so I am using this forthcoming internship to meet people, learn and contribute as well.</p>
-                        <img class="content-img" onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt="">
+                    <h2><span>Home</span>/ <span>Blog</span> /{{ $Posts->title }}</h2>
+                    <small class="published">Published on {{ $Posts->created_at }}</small>
+                    <p class="text">{{ $Posts->Body }}</p>
+                        <img class="content-img" onclick="modal(event)" src="{{ asset('images/'. $Posts->image_path) }}" alt="{{ asset('images/'. $Posts->image_path) }}">
                                     <!-- The Modal -->
                                     <div id="myModal" class="modal">
                                         <span class="close">&times;</span>
