@@ -100,17 +100,18 @@
 
             </div>
             <div class="posts-one">
-                <div class="main-one">
-                    <div><h3>Edit Your Post</h3></div>
+                <div class="main-two">
+                    <div class="sub"><h3>Edit Your Post</h3></div>
                     <form action="/bars/{{ $Posts->id }}" method="POST">
                         @csrf
                         @method('PUT')
 
-                        <input type="text"name="title" value="{{ $Posts->title }}">
-                        <textarea  name="body" >{{ $Posts->Body }}</textarea>
-                        <input  type="file" name="image" multiple  value="{{ asset('images/'. $Posts->image_path) }}">
+                        <input type="text" class="edit-title" name="title" value="{{ $Posts->title }}">
+                        <textarea  name="body" class="edit-body" >{{ $Posts->Body }}</textarea>
+                        <label for="fileupload" class="edit-label"> Select a file to upload</label>
+                        <input id="fileupload"   type="file" class="edit-image" name="image" multiple  value="{{ asset('images/'. $Posts->image_path) }}">
                         
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="edit-submit">Submit</button>
                     </form>
                 </div>
             </div>

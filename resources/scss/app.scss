@@ -3035,3 +3035,136 @@ footer {
         }
     }
 }
+
+
+//edit page starts here
+.main-two {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .sub {
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            color: #220726;
+        }
+    }
+
+    form {
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2%;
+
+        .edit-title {
+            width: 100%;
+            outline: none;
+            background: none;
+            border: 1px solid rgba(135, 30, 153, 0.1);
+            border-radius: 2px;
+            padding: 2%;
+            margin-top: 2%;
+            font-size: 14px;
+            color: #817474;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .edit-title::placeholder {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #817474;
+        }
+        
+        .edit-title:focus, .post-body:focus {
+            border: 1px solid rgba(135, 30, 153, 0.5);
+        }
+        
+        .edit-body {
+            width: 100%;
+            outline: none;
+            background: none;
+            border: 1px solid rgba(135, 30, 153, 0.1);
+            border-radius: 2px;
+            padding: 2%;
+            margin-top: 5%;
+            font-size: 14px;
+            color: #817474;
+            font-family: 'Poppins', sans-serif;
+            resize: none;
+            height: 200px;
+        
+            &::-webkit-scrollbar{
+                //display: none;
+                height: 2px;
+                width: 5px;
+                background: #871E99;
+                border-radius: 2px;
+            }
+        
+            &::-webkit-scrollbar-track{
+                background: #aaa;
+        
+            }
+        
+            &::-webkit-scrollbar-thumb{
+                background: #871E99;
+            }
+        
+            &::-webkit-scrollbar-thumb:hover{
+                background: #29092F;
+            }
+        }
+
+        .edit-label {
+            color: #817474;
+            font-family: 'Poppins', sans-serif;    
+            margin-top: 2%;
+            font-size: 14px;
+        }
+        
+        
+        .edit-image {
+            width: 100%;
+            outline: none;
+            background: none;
+            border: 1px solid rgba(135, 30, 153, 0.1);
+            border-radius: 2px;
+            padding: 2%;
+            margin-top: 2%;
+            font-size: 14px;
+            color: #817474;
+            font-family: 'Poppins', sans-serif;   
+        }
+
+
+        .edit-submit {
+            background:  #871E99;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #fff;
+            padding: 2%;
+            width: 30%;
+            margin-top: 3%;
+        }
+        
+        .edit-submit:hover {
+            background: none;
+            border: 1px solid #871E99;
+            color: #871E99;
+
+        }
+    }
+}
