@@ -2961,3 +2961,45 @@ footer .footer-inner ul li a:hover {
   border: 1px solid #871E99;
   color: #871E99;
 }
+
+@media screen and (max-width: 1024px) {
+  .main-two .sub h3 {
+    font-size: 20px;
+  }
+  .main-two form {
+    margin-top: 3%;
+    padding: 3%;
+  }
+  .main-two form .edit-title {
+    margin-top: 3%;
+    font-size: 12px;
+  }
+  .main-two form .edit-title::-moz-placeholder {
+    font-size: 12px;
+  }
+  .main-two form .edit-title:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .main-two form .edit-title::placeholder {
+    font-size: 12px;
+  }
+  .main-two form .edit-title:focus, .main-two form .edit-body:focus {
+    border: 1px solid rgba(135, 30, 153, 0.5);
+  }
+  .main-two form .edit-body {
+    margin-top: 5%;
+    height: 150px;
+  }
+  .main-two form .edit-label {
+    font-size: 12px;
+  }
+  .main-two form .edit-image {
+    margin-top: 3%;
+    font-size: 12px;
+  }
+  .main-two form .edit-submit {
+    font-size: 14px;
+    width: 40%;
+    margin-top: 4%;
+  }
+}

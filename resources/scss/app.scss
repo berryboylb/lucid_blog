@@ -3168,3 +3168,54 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .main-two {
+    
+        .sub {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    
+        form {
+            margin-top: 3%;
+            padding: 3%;
+    
+            .edit-title {
+                margin-top: 3%;
+                font-size: 12px;
+            }
+            
+            .edit-title::placeholder {
+                font-size: 12px;
+            }
+            
+            .edit-title:focus, .edit-body:focus {
+                border: 1px solid rgba(135, 30, 153, 0.5);
+            }
+            
+            .edit-body {
+                margin-top: 5%;
+                height: 150px;
+            }
+    
+            .edit-label {
+                font-size: 12px;
+            }
+            
+            
+            .edit-image {
+                margin-top: 3%;
+                font-size: 12px;  
+            }
+    
+    
+            .edit-submit {
+                font-size: 14px;
+                width: 40%;
+                margin-top: 4%;
+            }
+        }
+    }
+}
