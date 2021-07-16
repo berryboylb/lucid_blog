@@ -18,5 +18,5 @@ use App\Http\Controllers\PagesController;
 //     return view('welcome');
 // });
 
-//Route::get('/', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'signup']);
 Route::resource('/bars', 'App\Http\Controllers\PostController');

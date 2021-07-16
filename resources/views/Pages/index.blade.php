@@ -78,14 +78,10 @@
                                     <a href="bars/{{ $Post->id }}/edit">Edit</a>
                                    </div>
                 
-                                    <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                    <form action="/bars/{{ $Post->id }}" class="pt-3" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button
-                                        class="border-b-2 pb-2 border-dotted italic text-red-500" 
-                                         type="submit">
-                                            Delete
-                                        </button>
+                                        <button type="submit">Delete </button>
                                     </form>
                                 </div>
                                 <h2>{{ $Post->user->name ?? 'No name'}}</h2>
@@ -194,9 +190,9 @@
             modalImg.src = img.src;
             captionText.innerHTML = img.alt;
             var span = modal.firstElementChild;
-            span.onclick = function() { 
-                modal.style.display = "none";
-            }
+                span.onclick = function() { 
+                    modal.style.display = "none";
+                }
             }
         </script>
     </section>

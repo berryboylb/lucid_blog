@@ -159,7 +159,24 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required|unique:posts',
+            'body' => 'required',
+            'tags' => 'nullable',
+            'image'=> 'required|mimes:png,jpg,jpeg|max:5048'
+        ]);
+
+        $newImageName = time() . '-' . $request->string . '.' . $request->image->extension();
+
+        $request->image->move(public_path('images'), $newImageName);
+
+        $Posts = Posts::create([
+            'title'=>$request->input('title'),
+            'body'=>$request->input('body'),
+            'image_path'=>$newImageName,
+        ]);
+
+        return redirect('/cars');
     }
 
     /**
@@ -170,6 +187,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Post = Posts::find($id);
+
+        $Post->delete();
+
+        return redirect('/bars');
     }
 }
