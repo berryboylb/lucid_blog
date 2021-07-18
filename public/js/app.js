@@ -7,19 +7,13 @@
   \*****************************/
 /***/ (() => {
 
-//require('./bootstrap');
-//login dropDown
-var dropDown = document.querySelector('#dropDown');
-var dropDownContent = document.querySelector('.dropdown-content');
-
-var myFunction = function myFunction() {
-  dropDown.addEventListener('click', function () {
-    console.log('hi');
-    dropDownContent.classList.toggle('activate-dropdown');
-  });
-};
-
-myFunction();
+while (alive()) {
+  eat();
+  code();
+  sleep();
+  doNotDoTransfer();
+  repeat();
+}
 
 /***/ }),
 
