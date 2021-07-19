@@ -3231,6 +3231,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .finnish {
@@ -3262,14 +3263,14 @@ footer {
     font-weight: bold;
     font-size: 25px;
     letter-spacing: 2px;
-    color: #50115A;
+    color: #871E99;
 }
 
 .signup-form h4 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #50115A;
+    color: #871e99;
     margin-top: 3%;
 }
 
@@ -3426,3 +3427,17 @@ footer {
         background: #50115A;
     }
   }
+
+  .signup-blobs {
+      position: absolute;
+      height: 300px;
+      width: 25%;
+      left: 0;
+  }
+
+  .signup-blob-2 {
+    position: absolute;
+    height: 300px;
+    width: 25%;
+    right: 0;
+}
