@@ -24,13 +24,13 @@
                     <input class="input" id="newpassword" type="password" placeholder="Confirm Password">
                 <div class="terms">
                     <label class="containera">
-                        <input type="checkbox">
+                        <input id="sign-box" type="checkbox">
                         <span class="checkmark"></span>
                     </label>
                    <p> By ticking this box you agree to our terms and conditions</p>
                 </div>
     
-                <button type="submit" >Submit</button>
+                <button id="submit-btn" type="submit" disabled>Submit</button>
                 <h3>Already have an account Login here. <a href="">Login</a></h3>
             </form>
         </div>
@@ -38,6 +38,17 @@
          <img class="signup-blob-2" src="{{ asset('images/blob (4).svg') }}" alt="">
     </div> 
    
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>    
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>   
+        <script>
+            var signBox = document.querySelector('#sign-box');
+            var submitBtn = document.querySelector('#submit-btn');
+            signBox.addEventListener('click', ()=>{
+                if(submitBtn.disabled.includes(true)){
+                    console.log('hi');
+                }
+                submitBtn.disabled = false;
+                submitBtn.style.background = '#871E99';
+            })
+         </script> 
 </body>
 </html>
