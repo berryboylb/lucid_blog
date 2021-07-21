@@ -30,7 +30,7 @@
                    <p> By ticking this box you agree to our terms and conditions</p>
                 </div>
     
-                <button id="submit-btn" type="submit" disabled>Submit</button>
+                <button id="submit-btn" type="submit">Submit</button>
                 <h3>Already have an account Login here. <a href="">Login</a></h3>
             </form>
         </div>
@@ -42,12 +42,21 @@
         <script>
             var signBox = document.querySelector('#sign-box');
             var submitBtn = document.querySelector('#submit-btn');
+            var letter = "f";
+            submitBtn.disabled = true;
+            submitBtn.style.background = '#aaa';
+           
             signBox.addEventListener('click', ()=>{
-                if(submitBtn.disabled.includes(true)){
-                    console.log('hi');
+                if(letter == "f"){
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#871E99';
+                    letter = "g";
                 }
-                submitBtn.disabled = false;
-                submitBtn.style.background = '#871E99';
+                else{
+                    letter = "f";
+                    submitBtn.disabled = true;
+                    submitBtn.style.background = '#aaa';
+                }
             })
          </script> 
 </body>
