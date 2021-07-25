@@ -13,6 +13,10 @@ class Posts extends Model
 
     protected $fillable = ['title', 'body', 'image_path', 'views', 'user_id', 'categories_id', 'published'];
 
+    public function comment(){
+        return $this->hasMany(comment::class);
+    }
+
     public function categories(){
         return $this->belongsTo(Categories::class);
     }

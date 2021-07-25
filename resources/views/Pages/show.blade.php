@@ -117,9 +117,10 @@
                 </form>
             </div>
                 <div class="main-one">
-                    <h2><span>Home</span>/ <span>{{ $CategoryName }}</span> /{{ $Posts->title }}</h2>
+                    <h2><span>Home</span>/ <span>{{ $CategoryName }}</span> / {{ $Posts->title }}</h2>
                     <small class="published">Published on {{ $Posts->created_at }}</small>
                     <p class="text">{{ $Posts->Body }}</p>
+                  
                         <img class="content-img" onclick="modal(event)" src="{{ asset('images/'. $Posts->image_path) }}" alt="{{ asset('images/'. $Posts->image_path) }}">
                                     <!-- The Modal -->
                                     <div id="myModal" class="modal">
@@ -201,28 +202,41 @@
                         </div>
 
                         <div class="comment-box">
-                            <form action="">
-                                <textarea name="comment" placeholder="Write a comment..."></textarea>
+                            <form action="{{ route('comment') }}"  method="post" class="comment-form">
+                                @csrf
+                                <input type="hidden" name="posts_id" value="{{ $Posts->id }}">
+                                <textarea name="Body" placeholder="Write a comment..."></textarea>
                                 <button type="Submit">Comment</button>
                             </form>
                         </div>
+                      
 
+                
                         <div class="comments">
                             <h3>Comments:</h3>
-                            <div class="one-person-comment">
+                               <div id="bube-ajax">
+                                @forelse ($Posts->comment as $comments)
+                                <div class="one-person-comment">
                                     <div class="comment-img">
                                         <img src="{{ asset('profile_pictures/Ellipse 9.png') }}" alt="">
                                     </div>
                                     <div class="brave">
                                         <div class="name-time">
-                                            <h4>Emily shody</h4>
-                                            <small> <i class="fas fa-eye"></i></i> 3 mins ago</small>
+                                            <h4>{{ $Posts->user->name ?? 'Anonymous'}}</h4>
+                                            <small> <i class="fas fa-eye"></i> {{ ago($comments->created_at) }}</small>
                                         </div>
                                         <div class="the-comment">
-                                            <p>Recently, I noticed a significant difference in my response to coding obstructions (or bugs) from the usual (quick) frustration to curiosity. I did a review, and realized it's been that way for almost entirely </p>
+                                            <p>{{$comments->Body }}</p>
                                         </div>
                                     </div>
-                            </div>
+                                </div>
+                                @empty
+                                <div class="error-log">
+                                    <img src="{{ asset('images/oops.jpg') }}" alt="{{ asset('images/oops.jpg') }}">
+                                    <h2 class="no-story">Ooops no comments yet, be the first to engage this post.</h2>
+                                </div>
+                             @endforelse
+                               </div>
                         </div>
                 </div>
             </div>
@@ -246,6 +260,42 @@
                 modal.style.display = "none";
             }
             }
+        </script>
+        <script>
+            //picks and submits form inputs
+            $(document).ready(function(){
+                $('form.comment-form').on('submit', function(){
+    
+                    var that = $(this),
+                        url = that.attr('action'),
+                        type = that.attr('method'),
+                        data = {};
+    
+                    that.find('[name]').each(function(index, value) {
+                        var that = $(this),
+                            name = that.attr('name'),
+                            value = that.val();
+    
+                        data[name] = value;
+                    });
+    
+                    $.ajax({
+                        url: url,
+                        type: type,
+                        data: data,
+    
+                        success: function(response)
+                        {
+                            //our response what was echoed in the
+                            //empty the div for a new comment
+                            $('#bube-ajax').empty();
+                            //append what was echoed in the controller
+                            $('#bube-ajax').html(response);
+                        }
+                    });
+                    return false;
+                });
+            });
         </script>
     </section>
 @endsection

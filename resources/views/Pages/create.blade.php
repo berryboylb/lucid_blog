@@ -136,7 +136,7 @@
                 <div class="creator-picture">
                     <img src="{{ asset('images/Rectangle 402.png') }}" alt="{{ asset('images/photo.png') }}">
                 </div>
-                <form action="/" method="post" enctype="multipart/form-data" class="main-form">
+                <form action="/bars" method="post" enctype="multipart/form-data" class="main-form">
                     @csrf
                     <input class="post-title" name="title" type="text" placeholder="Title">
                     <textarea class="post-body" name="body" id="" cols="30" rows="10" placeholder="Compose an Epic"></textarea>
@@ -418,7 +418,7 @@
             </div>
 
             <div class="suscribe">
-                <form action="" class="suscribe-form">
+                <form action="{{ route('comment') }}" class="suscribe-form">
                     <h3>Get your favourite website posts on your time line</h3>
                     <input class="email-subscribe" type="text" placeholder="Enter your email">
                     <input class="subscribe-submit" type="submit" value = "Subscribe">

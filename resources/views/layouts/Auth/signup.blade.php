@@ -31,11 +31,11 @@
                 </div>
     
                 <button id="submit-btn" type="submit">Submit</button>
-                <h3>Already have an account Login here. <a href="">Login</a></h3>
+                <h3>Already have an account Login here. <a href="/">Login</a></h3>
             </form>
         </div>
-        <img class="signup-blobs" src="{{ asset('images/blob (4).svg') }}" alt="">
-         <img class="signup-blob-2" src="{{ asset('images/blob (4).svg') }}" alt="">
+        <img class="signup-blobs" src="{{ asset('images/blob (4).svg') }}" alt="blob">
+         <img class="signup-blob-2" src="{{ asset('images/blob (4).svg') }}" alt="blob">
     </div> 
    
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>   

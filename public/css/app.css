@@ -3185,9 +3185,7 @@ footer .footer-inner ul li a:hover {
   margin-top: 3%;
 }
 .signup-form button:hover {
-  background: none;
-  border: 1px solid #871E99;
-  color: #871E99;
+  background: #2B0B31;
 }
 
 .signup-form h3 {
@@ -3223,4 +3221,118 @@ footer .footer-inner ul li a:hover {
   height: 300px;
   width: 25%;
   right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .finnish lottie-player {
+    width: 50px;
+    height: 50px;
+  }
+
+  .signup-form h2 {
+    font-size: 20px;
+  }
+
+  .signup-form h4 {
+    font-size: 14px;
+  }
+
+  .signup-form .input {
+    font-size: 12px;
+  }
+  .signup-form .input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .signup-form .input:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .signup-form .input::placeholder {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sign-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .finnish {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+    position: relative;
+    z-index: 99;
+    height: 100%;
+  }
+
+  .signup-form h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .signup-form h4 {
+    font-size: 14px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-weight: 400;
+  }
+
+  .signup-form .input {
+    padding: 3%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    z-index: 99;
+    position: relative;
+  }
+
+  .terms {
+    margin-top: 1%;
+  }
+
+  .terms p {
+    font-size: 10px;
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  .signup-form button {
+    background: #aaa;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    padding: 3%;
+    width: 50%;
+    margin-top: 5%;
+  }
+
+  .signup-form h3 {
+    font-size: 14px;
+    margin-top: 5%;
+  }
+
+  .signup-form a {
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .signup-blobs {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    z-index: -99;
+    display: none;
+  }
+
+  .signup-blob-2 {
+    display: none;
+  }
+}
+#submit-btn {
+  background: #871e99;
 }

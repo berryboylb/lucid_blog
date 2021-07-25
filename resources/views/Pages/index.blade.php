@@ -146,11 +146,11 @@
                                               </svg>
                                             </label>
                                           </div>
-                                        <a href="">
+                                        <a href="/bars/{{ $Post->id }}">
                                             <span> Likes</span>
                                         </a>
                                     </div>
-                                    <a href="">
+                                    <a href="/bars/{{ $Post->id }}">
                                         <i class="far fa-comment-alt"></i>
                                         <i class="far fa-eye"></i>
                                         <span>Comments</span>

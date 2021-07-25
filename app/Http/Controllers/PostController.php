@@ -107,9 +107,6 @@ class PostController extends Controller
     public function show($id)
 
     {
-
-        //dd($id);
-
         $Posts = Posts::find($id);
         $cat_id = $Posts->categories_id;
         $findCatName = Categories::find($cat_id);
@@ -117,6 +114,7 @@ class PostController extends Controller
         // dd($findCatName->category);
         $links = Link::all();
         $Categories = Categories::all();
+        $allPosts = Posts::all();
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
         
          //$Posts = Posts::find($id);
@@ -128,6 +126,7 @@ class PostController extends Controller
             'Categories' => $Categories,
             'Posts' => $Posts,
             'CategoryName'=> $CategoryName,
+            'allPosts' => $allPosts,
         ]);
     }
 
