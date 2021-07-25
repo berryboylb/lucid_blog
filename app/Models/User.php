@@ -45,4 +45,8 @@ class User extends Authenticatable
        
         return $this->hasOne(Post::class, 'id');
     }
+
+    public function newsletter(){
+        return $this->hasOne(newsletter::class);
+    }
 }

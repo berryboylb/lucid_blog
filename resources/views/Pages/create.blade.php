@@ -140,7 +140,7 @@
                     @csrf
                     <input class="post-title" name="title" type="text" placeholder="Title">
                     <textarea class="post-body" name="body" id="" cols="30" rows="10" placeholder="Compose an Epic"></textarea>
-                    <input class="post-tags" name="tags" type="text" multiple placeholder="Select tags">
+                    <input class="post-tags" id="categories_tags" name="tags" type="text"  placeholder="Select tags">
                     <input class="post-image" type="file" name="image">
                    <div class="post-submit">
                        <input class="send" type="Submit" value="Publish">
@@ -418,9 +418,10 @@
             </div>
 
             <div class="suscribe">
-                <form action="{{ route('comment') }}" class="suscribe-form">
+                <form action="{{ route('newsLetter') }}" method="POST" class="suscribe-form">
+                    @csrf
                     <h3>Get your favourite website posts on your time line</h3>
-                    <input class="email-subscribe" type="text" placeholder="Enter your email">
+                    <input class="email-subscribe" name="body" type="text" placeholder="Enter your email">
                     <input class="subscribe-submit" type="submit" value = "Subscribe">
                 </form>
             </div>
@@ -453,6 +454,51 @@
                 modal.style.display = "none";
             }
             }
+        </script>
+         <script>
+            //picks and submits form inputs
+            $(document).ready(function(){
+                $('form.suscribe-form').on('submit', function(){
+    
+                    var that = $(this),
+                        url = that.attr('action'),
+                        type = that.attr('method'),
+                        data = {};
+    
+                    that.find('[name]').each(function(index, value) {
+                        var that = $(this),
+                            name = that.attr('name'),
+                            value = that.val();
+    
+                        data[name] = value;
+                    });
+    
+                    $.ajax({
+                        url: url,
+                        type: type,
+                        data: data,
+    
+                        success: function(response)
+                        {
+                            $.each( response, function( key, value ) {
+                           
+                           if(key == 'success'){
+                               swal(key, value, key)
+                           }
+                           else {
+                               swal(key, value, key)
+                           }
+                           
+                           
+                       });
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+        <script>
+            $('#categories_tags').tags();
         </script>
     </section>
 @endsection

@@ -21,6 +21,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [PagesController::class, 'login']);
 Route::get('/signup', [PagesController::class, 'signUp']);
 //use post when you want to store data in laravel
+//use either url name eg /form or {{ route('name') }} for action
 Route::post('/form', [\App\Http\Controllers\PagesController::class, 'form'])->name('comment');
 Route::post('/newsletter', [\App\Http\Controllers\PagesController::class, 'newsLetter'])->name('newsLetter');
 Route::resource('/bars', 'App\Http\Controllers\PostController');

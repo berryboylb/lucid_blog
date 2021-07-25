@@ -10,6 +10,7 @@ use App\Models\Ui_design;
 use App\Models\Categories;
 use App\Models\comment;
 use App\Models\Posts;
+use App\Models\newsletter;
 
 class PagesController extends Controller
 {
@@ -80,6 +81,30 @@ class PagesController extends Controller
 
     //newsletter validation  
     public function newsLetter(Request $request){
-        dd('hi');
+        $request->validate([
+            'body' => 'required|unique:newsletter',
+        ]);
+
+        $user_id = 1;
+
+        $newsLetter = newsletter::create([
+            'users_id' => $user_id,
+            'body'=> $request->input('body')
+        ]);
+
+        if($newsLetter){
+            $response = [
+                'success'=> 'Email saved'
+            ];
+            echo json_encode($response);
+        }
+        else {
+            $response = [
+                'failure'=> 'Invalid email format or email already exists'
+            ];
+            echo json_encode($response);
+        }
+        
+
     }
 }

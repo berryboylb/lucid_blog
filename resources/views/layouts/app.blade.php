@@ -7,7 +7,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/tags.css') }}">
     <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/tags.js') }}"></script>
 </head>
 <body id="body">
     <header>
