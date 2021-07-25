@@ -44,7 +44,7 @@
 			if(opts.classList) $wrapper.addClass(opts.classList);
 			
 			// add input
-			$ul.append("<li class='tags-input'><input type='text' class='tags-secret'/></li>");
+			$ul.append("<li class='tags-input'><input type='text' placeholder ='tags' class='tags-secret'/></li>");
 			// set to dom
 			$self.after($wrapper);
 			// add the old element

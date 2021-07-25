@@ -1414,6 +1414,23 @@ footer {
     color: #817474;
 }
 
+//label for image upload 
+.create_label {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(135, 30, 153, 0.1);
+    border-radius: 2px;
+    padding: 2%;
+    margin-top: 2%;
+    font-size: 14px;
+    color: #817474;
+    font-family: 'Poppins', sans-serif;
+
+    i {
+        color:  #871e99;
+    }
+}
+
 .post-title:focus, .post-body:focus {
     border: 1px solid rgba(135, 30, 153, 0.5);
 }
@@ -2228,7 +2245,7 @@ footer {
     width: 85%;
 }
 
-.post-title, .post-title::placeholder,.post-body, .post-tags, .post-tags::placeholder, .post-image  {
+.post-title,.create_label, .post-title::placeholder,.post-body, .post-tags, .post-tags::placeholder, .post-image  {
     font-size: 12px;
 }
 
@@ -3065,7 +3082,7 @@ footer {
         flex-direction: column;
         padding: 2%;
 
-        .edit-title {
+        .edit-title{
             width: 100%;
             outline: none;
             background: none;
@@ -3086,6 +3103,38 @@ footer {
         
         .edit-title:focus, .post-body:focus {
             border: 1px solid rgba(135, 30, 153, 0.5);
+        }
+
+        .edit-image-catalogue {
+            width: 100%;
+            border: 1px solid rgba(135, 30, 153, 0.1);
+            border-radius: 2px;
+            padding: 2%;
+            margin-top: 2%;
+            div {
+                position: relative;
+                height: 150px;
+                width: 150px;
+                display: inline-block;
+                padding: 2%;
+                
+                span {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 12px;
+                    font-style: 'lato', sans-serif;
+                    cursor: pointer;
+                }
+            }
+
+
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
         }
         
         .edit-body {
@@ -3195,6 +3244,15 @@ footer {
                 border: 1px solid rgba(135, 30, 153, 0.5);
             }
             
+            .edit-image-catalogue {
+                div {
+                    width: 100%;
+                }
+               
+                img {
+                    width: 100%;
+                }
+            }
             .edit-body {
                 margin-top: 5%;
                 height: 150px;
@@ -3551,3 +3609,4 @@ footer {
 #submit-btn {
     background: #871e99;
 }
+

@@ -97,40 +97,7 @@
                         <a href="">View More</a>
                     </div>
                 </div>
-
             </div>
-
-            <script>
-                  $(".post-tags").on({
-                    focusout : function() {
-                    var txt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
-                    if(txt) $("<span/>", {text:txt.toLowerCase(), insertBefore:this});
-                    this.value = "";
-                    },
-                    keyup : function(ev) {
-                    // if: comma|enter (delimit more keyCodes with | pipe)
-                    if(/(188|13)/.test(ev.which)) $(this).focusout(); 
-                    }
-                });
-                $('#tags').on('click', 'span', function() {
-                    if(confirm("Remove "+ $(this).text() +"?")) $(this).remove(); 
-                });
-
-            
-            </script>
-
-            <style>
-                .badtag {
-                    border: solid 1px red !important;
-                    background-color: #d24a4a !important;
-                    color: white !important;
-                    }
-
-                    .badtag a {
-                            color: #ad2b2b !important;
-                        }
-            </style>
-
             <div class="create-form">
                <div class="picture-form">
                 <div class="creator-picture">
@@ -141,33 +108,13 @@
                     <input class="post-title" name="title" type="text" placeholder="Title">
                     <textarea class="post-body" name="body" id="" cols="30" rows="10" placeholder="Compose an Epic"></textarea>
                     <input class="post-tags" id="categories_tags" name="tags" type="text"  placeholder="Select tags">
-                    <input class="post-image" type="file" name="image">
+                    
+                    <label for="create_image" class="create_label"> <i class="fas fa-bell"></i> Click to upload Image</label>
+                    <input class="post-image" id="create_image" style="display: none" type="file" name="image">
+                   
                    <div class="post-submit">
                        <input class="send" type="Submit" value="Publish">
                        <button class="save" type="Submit" disabled onclick= "draft()">Save Draft</button>
-                       <script>
-                        function draft(){
-                        
-                                    if($("#title").val() === "")
-                                    {
-                                      alert("Please enter a valid Title");
-                                    }
-                                    else if($("#story").val()==="")
-                                    {
-                                      alert("Body field cannot be empty");
-                                    }
-                                    else if($("#tags").val()==="")
-                                    {
-                                      alert("Select or create at least one tag");
-                                    }
-                                    else
-                                    {
-                                           //$.post('<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>', {draft:true,title: $("#title").val(), tag1: $("#tag1").val(),details: $("#details").val() }, function(data, status){
-                        
-                                        //});
-                                    }
-                        }
-                        </script>
                    </div>
                 </form>
                </div>

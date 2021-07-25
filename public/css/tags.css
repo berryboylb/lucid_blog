@@ -4,6 +4,7 @@
 	http://connect.ai	
 	http://youtube.com/optikalefxx
 */
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
 .tags-wrapper {
 	width: 100%;
 	outline: none;
@@ -14,7 +15,7 @@
 	margin-top: 4%;
 	font-size: 14px;
 	color: #817474;
-	font-family: "Poppins", sans-serif;
+	font-family: "Lato", sans-serif;
 }
 .tags-wrapper ul {
 	margin:0px;
@@ -23,6 +24,7 @@
 .tags-wrapper li {
 	float:left;
 	list-style: none;
+	font-family: "Lato", sans-serif;
 }
 .tags-wrapper li.tag {
 	font-size:11px;

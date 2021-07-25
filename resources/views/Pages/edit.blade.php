@@ -108,13 +108,33 @@
 
                         <input type="text" class="edit-title" name="title" value="{{ $Posts->title }}">
                         <textarea  name="body" class="edit-body" >{{ $Posts->Body }}</textarea>
-                        <label for="fileupload" class="edit-label"> Select a file to upload</label>
-                        <input id="fileupload"   type="file" class="edit-image" name="image" multiple  value="{{ asset('images/'. $Posts->image_path) }}">
-                        
+                        <div class="edit-image-catalogue" max="4">
+                            <div>
+                                <img src="{{ asset('images/'. $Posts->image_path) }}" alt="Post Images">
+                            </div>
+                            <div>
+                                <img src="{{ asset('images/'. $Posts->image_path) }}" alt="Post Images">
+                            </div>
+                        </div>
+                        <label for="fileupload" class="create_label"><i class="fas fa-bell"></i> Click to Select new images and upload</label>
+                        <input id="fileupload"   type="file" class="edit-image" style="display: none" name="image" multiple  >
                         <button type="submit" class="edit-submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
+        <script>
+            var editBox = document.querySelector('.edit-image-catalogue');
+            Array.from(editBox.children).forEach((div)=>{
+                const span = document.createElement('span');
+                span.textContent = "x";
+                div.appendChild(span);
+                span.addEventListener('click', ()=> {
+                  const firstParent =  span.parentElement;
+                  const secondParent = firstParent.parentElement;
+                  secondParent.removeChild(firstParent);
+                })
+            })
+        </script>
     </section>
 @endsection
