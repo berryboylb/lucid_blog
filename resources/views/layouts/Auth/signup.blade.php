@@ -15,13 +15,29 @@
                 <lottie-player class="scanner" src="https://assets8.lottiefiles.com/packages/lf20_jtvduiqm.json" background="transparent"  speed="1" loop autoplay></lottie-player>
     
             <form class="signup-form" action="" method="post">
+                @csrf
                     <h2>Welcome to Lucid Blog</h2>
                     <h4>Please fill in the following details.</h4>
-                    <input class="input" id="firstname" type="text" placeholder="First name">
-                    <input class="input" id="lastname" type="text" placeholder="Last name">
-                    <input class="input" id="email" type="email" placeholder="Email">
-                    <input class="input" id="password" type="password" placeholder="Password">
-                    <input class="input" id="newpassword" type="password" placeholder="Confirm Password">
+                    <input class="input  @error('fname') is-invalid @enderror" id="firstname" name="fname" type="text" placeholder="First name">
+                    @error('fname')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    <input class="input @error('lname') is-invalid @enderror" id="lastname" name="lname" type="text" placeholder="Last name">
+                    @error('lname')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    <input class="input @error('email') is-invalid @enderror" id="email" name="email" type="email" placeholder="Email">
+                    @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                     @enderror
+                    <input class="input" id="password" name="password" type="password" placeholder="Password">
+                    @error('password')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    <input class="input @error('password_confirmation') is-invalid @enderror" id="con-password" name="password_confirmation" type="password" placeholder="Confirm Password">
+                    @error('password_confirmation')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 <div class="terms">
                     <label class="containera">
                         <input id="sign-box" type="checkbox">
