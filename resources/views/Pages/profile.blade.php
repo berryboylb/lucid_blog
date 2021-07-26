@@ -28,32 +28,37 @@
                 </div>
             </div>
             <div class="posts-one">
-                <div>
-                    <form action="" method="POST">
-                        @csrf
-                        <div>
-                            <img src="{{ asset('images/Banner.png') }}" alt="{{ asset('images/Banner.png') }}">
+                <div class="profile-credentials">
+                       <form action="" method="post">
+                           @csrf
+                           <div>
+                                <img src="{{ asset('images/Banner.png') }}">
+                                <label for="my-cover-img"><i class="fas fa-sort-down"></i></label>
+                           </div>
+                           <input type="file" id="my-cover-img">
+                           <input type="Submit" value="submit">
+                       </form>
         
                             <div>
                                 <div>
                                     <img src="{{ asset('images/Rectangle 402.png') }}" alt="{{ asset('profile_pictures/Ellipse 9.png') }}">
                                 </div>
-                                <h3></h3>
+                                <h3>{{ $User->name }} {{ $User->last_name }}</h3>
+                                <h3>{{ $User->email }}</h3>
                                 <p>Graphic Designer at Self</p>
                                 <input type="text" value="Graphic Designer at Self">
                             </div>
         
-                            <div class="following">
+                            <div>
                                 <h3>Following</h3>
                                 <p>50</p>
                             </div>
-        
-                            <div class="followers">
+    
+                            <div>
                                 <h3>Followers</h3>
                                 <p>500</p>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>

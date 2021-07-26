@@ -112,10 +112,12 @@ class PagesController extends Controller
         $Categories = Categories::all();
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
         $links = Link::all();
+        $User = Auth::user();
         return view('Pages.profile', [
             'Categories' => $Categories,
             'Ui_designs' => $Ui_designs,
             'links' => $links,
+            'User' => $User,
         ]);
     }
 }

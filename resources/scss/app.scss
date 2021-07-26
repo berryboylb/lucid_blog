@@ -3617,24 +3617,3 @@ footer {
     background: #871e99;
 }
 
-.profile-me {
-    width: 100%;
-
-    .cover-img {
-        width: 100%;
-    }
-}
-
-.profile-img-con {
-    position: relative;
-    i {
-        font-size: 10px;
-        position: absolute;
-        bottom: 0;
-        left: 40%;
-        z-index: 9999 !important;
-        color: #fff;
-        background: #871E99;
-        padding: 2%;
-    }
-}
