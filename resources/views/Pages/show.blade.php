@@ -118,7 +118,7 @@
             </div>
                 <div class="main-one">
                     <h2><span>Home</span>/ <span>{{ $CategoryName }}</span> / {{ $Posts->title }}</h2>
-                    <small class="published">Published on {{ $Posts->created_at }}</small>
+                    <small class="published">Published on {{ ago($Posts->created_at) }}</small>
                     <p class="text">{{ $Posts->Body }}</p>
                   
                         <img class="content-img" onclick="modal(event)" src="{{ asset('images/'. $Posts->image_path) }}" alt="{{ asset('images/'. $Posts->image_path) }}">

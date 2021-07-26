@@ -108,7 +108,6 @@
                     <input class="post-title" name="title" type="text" placeholder="Title">
                     <textarea class="post-body" name="body" id="" cols="30" rows="10" placeholder="Compose an Epic"></textarea>
                     <input class="post-tags" id="categories_tags" name="tags" type="text"  placeholder="Select tags">
-                    
                     <label for="create_image" class="create_label"> <i class="fas fa-bell"></i> Click to upload Image</label>
                     <input class="post-image" id="create_image" style="display: none" type="file" name="image">
                    
@@ -150,7 +149,7 @@
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
-                                <h2>{{ $Post->user->name ?? 'No name'}}</h2>
+                                <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
@@ -233,6 +232,7 @@
                   <div id="Paris" class="tabcontent">
                     @foreach ($Categories as $Category)
                      @foreach ($Category->posts as $Post )
+                     @if ($Post->user_id == $User)
                      <div class="profile-posts">
                         <div class="main-content">
                             <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
@@ -254,7 +254,7 @@
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
-                                <h2>{{ $Post->user->name ?? 'No name'}}</h2>
+                                <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
                                 <small>Created At  {{ $Post->created_at }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
@@ -282,7 +282,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                     @endif
                      @endforeach
                     @endforeach
                   </div>
@@ -311,8 +312,8 @@
                             <h2 class="create-category">{{ $Category->category }}</h2>
                             <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
-                                <h2>{{ $Post->user->name ?? 'No name'}}</h2>
-                                <small>Created At  {{ $Post->created_at }} </small>
+                                <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
+                                <small>Created At  {{ ago($Post->created_at) }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
                                 <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">

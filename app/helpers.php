@@ -1,6 +1,7 @@
 <?php
 
 /*go to composer.json to  and add this
+autoload
 {
     "files": [
             "app/helpers.php"

@@ -8,6 +8,7 @@ use App\Models\Link;
 use App\Models\Ui_design;
 use App\Models\Categories;
 use App\Models\Posts;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -26,6 +27,7 @@ class PostController extends Controller
         //
         $links = Link::all();
         $Categories = Categories::all();
+        $User = Auth::user();
 
         //dd($Categories);
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
@@ -33,12 +35,14 @@ class PostController extends Controller
         //  $m  =  $Categories->posts()->get();
 
         //  dd($m);
+        //dd($Categories);
 
         
         return view('pages.index', [
             'links' => $links,
             'Ui_designs'=> $Ui_designs,
             'Categories' => $Categories,
+            'User' => $User
         ]);
     }
 
@@ -52,11 +56,13 @@ class PostController extends Controller
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
         $links = Link::all();
         $Categories = Categories::all();
+        $User = Auth::user()->id;
         
         return view('Pages.create', [
             'Ui_designs'=> $Ui_designs,
             'links' => $links,
             'Categories' => $Categories,
+            'User' => $User
         ]);
     }
 
@@ -68,6 +74,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->input());
         $request->validate([
             'title' => 'required|unique:posts',
             'body' => 'required',
@@ -75,9 +82,17 @@ class PostController extends Controller
             'image'=> 'required|mimes:png,jpg,jpeg|max:5048'
         ]);
 
-        $Categories = Categories::create([
-            'categories'=>$request->input('tags')
-        ]);
+        $tags = explode(",", $request->input('tags'));
+        foreach($tags as $tag){
+            $Categories = Categories::where('category', $tag);
+            if(empty($Categories)){
+                $Categories = Categories::create([
+                    'category'=>$tag
+                ]);
+            }
+           
+        }
+        
 
         
 
@@ -87,7 +102,7 @@ class PostController extends Controller
 
         $newViews = 0;
         $newPublished = 1;
-        $newUser_id = 1;
+        $newUser_id = Auth::user()->id;
         $newCategories_id = 2;
 
         $Posts = Posts::create([
@@ -100,7 +115,6 @@ class PostController extends Controller
             'image_path'=>$newImageName,
         ]);
 
-       
     }
 
     /**

@@ -28,6 +28,7 @@ Route::get("/", [\App\Http\Controllers\Auth\LoginController::class, "showUserLog
 Route::post("/", [\App\Http\Controllers\Auth\LoginController::class, "submitUserLoginForm"]);
 Route::get("/register", [\App\Http\Controllers\Auth\RegisterController::class, "showUserRegisterForm"])->name("register");
 Route::post("/register", [\App\Http\Controllers\Auth\RegisterController::class, "submitUserRegisterForm"]);
+Route::get("/logout", [\App\Http\Controllers\Auth\LoginController::class, "logout"])->name("logout");
 //use post when you want to store data in laravel
 //use either url name eg /form or {{ route('name') }} for action
 Route::post('/form', [\App\Http\Controllers\PagesController::class, 'form'])->name('comment');

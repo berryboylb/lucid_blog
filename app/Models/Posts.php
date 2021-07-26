@@ -21,4 +21,7 @@ class Posts extends Model
         return $this->belongsTo(Categories::class);
     }
 
+    public function user(){
+        return $this->belongsTo(user::class);
+    }
 }

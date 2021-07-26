@@ -61,4 +61,14 @@ class LoginController extends \App\Http\Controllers\Controller
 
         return back()->withInput($request->only('email', 'remember'))->with("error", "Invalid login credentials");
     }
+
+    public function logout(){
+        if(Auth::guard('admin')->check()){
+            Auth::guard('admin')->logout();
+        }
+        else {
+            Auth::logout();
+        }
+        return redirect()->back();
+    }
 }

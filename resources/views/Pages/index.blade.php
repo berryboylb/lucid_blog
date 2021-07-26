@@ -84,8 +84,8 @@
                                         <button type="submit">Delete </button>
                                     </form>
                                 </div>
-                                <h2>{{ $Post->user->name ?? 'No name'}}</h2>
-                                <small>Created At  {{ $Post->created_at }} </small>
+                                <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
+                                <small>Created At  {{ ago($Post->created_at) }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="{{ asset('images/'. $Post->image_path) }}" >
                                 <!-- The Modal -->

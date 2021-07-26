@@ -16,7 +16,7 @@
                 </div>
                <div class="link">
                     <a href="#">Sign Up</a>
-                    <a href="#">Logout</a>
+                    <a href="{{ route('logout') }}">Logout</a>
                </div>
             </div>
         </ul>
