@@ -43,19 +43,19 @@ if(!function_exists('ago')){
                 // seconds is a good interval of choice
                 case(strtotime('-1 min', $dateto) < $datefrom):
                     $datediff = $difference;
-                    $res = ($datediff == 1) ? $datediff . ' second' : $datediff . ' seconds';
+                    $res = ($datediff == 1) ? $datediff . ' second' : $datediff . ' seconds ago';
                     break;
                 // If difference is between 60 seconds and
                 // 60 minutes, minutes is a good interval
                 case(strtotime('-1 hour', $dateto) < $datefrom):
                     $datediff = floor($difference / 60);
-                    $res = ($datediff == 1) ? $datediff . ' minute' : $datediff . ' minutes';
+                    $res = ($datediff == 1) ? $datediff . ' minute' : $datediff . ' minutes ago';
                     break;
                 // If difference is between 1 hour and 24 hours
                 // hours is a good interval
                 case(strtotime('-1 day', $dateto) < $datefrom):
                     $datediff = floor($difference / 60 / 60);
-                    $res = ($datediff == 1) ? $datediff . ' hour' : $datediff . ' hours';
+                    $res = ($datediff == 1) ? $datediff . ' hour' : $datediff . ' hours ago';
                     break;
                 // If difference is between 1 day and 7 days
                 // days is a good interval                
@@ -66,7 +66,7 @@ if(!function_exists('ago')){
                     }
         
                     $datediff = $day_difference;
-                    $res = ($datediff == 1) ? 'yesterday' : $datediff . ' days';
+                    $res = ($datediff == 1) ? 'yesterday' : $datediff . ' days ago';
                     break;
                 // If difference is between 1 week and 30 days
                 // weeks is a good interval            
@@ -77,7 +77,7 @@ if(!function_exists('ago')){
                     }
         
                     $datediff = $week_difference;
-                    $res = ($datediff == 1) ? 'last week' : $datediff . ' weeks';
+                    $res = ($datediff == 1) ? 'last week' : $datediff . ' weeks ago';
                     break;
                 // If difference is between 30 days and 365 days
                 // months is a good interval, again, the same thing
@@ -91,7 +91,7 @@ if(!function_exists('ago')){
                     }
         
                     $datediff = $months_difference;
-                    $res = ($datediff == 1) ? $datediff . ' month' : $datediff . ' months';
+                    $res = ($datediff == 1) ? $datediff . ' month' : $datediff . ' months ago';
         
                     break;
                 // If difference is greater than or equal to 365
@@ -107,7 +107,7 @@ if(!function_exists('ago')){
                     }
         
                     $datediff = $year_difference;
-                    $res = ($datediff == 1) ? $datediff . ' year' : $datediff . ' years';
+                    $res = ($datediff == 1) ? $datediff . ' year' : $datediff . ' years ago';
                     break;
             }
             return $res;

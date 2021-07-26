@@ -35,6 +35,7 @@ nav {
     display: flex;
     align-items: center;
     margin-left: 5%;
+    justify-content: center;
 }
 
 .title h3 {
@@ -42,6 +43,8 @@ nav {
     font-weight: bold;
     color: #29092F;
     font-family: 'Lato', sans-serif;
+    display: inline;
+    margin-top: 10px;
 }
 
 .navlist {
@@ -59,6 +62,7 @@ nav {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Lato', sans-serif;
+    margin-top: 15px;
 }
 
 .navlist li a {
@@ -210,15 +214,15 @@ nav {
 .name-cone {
     width: 70%;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     //align-items: center;
-    //background: chocolate;
 
     h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 14px;
         color: #C4C4C4;
+        display: inline;
+        margin-top: 15px;
     }
 
     p {
@@ -3617,3 +3621,118 @@ footer {
     background: #871e99;
 }
 
+.profile-credentials {
+    width: 100%;
+    position: relative;
+}
+
+.my-cover-img-con {
+    width: 100%;
+    height: 150px;
+    background: chocolate;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    label {
+        position: absolute;
+        font-size: 20px;
+        padding: 0.5%;
+        background: #fff;
+        border-radius: 50%;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+
+        i {
+            font-size: 15px;
+            color: #871E99;
+        }
+
+    }
+}
+
+.none {
+    display: none;
+}
+
+.profile-pic-form {
+    width: 100%;
+    div {
+        position: absolute;
+        left: 2%;
+        top: 20%;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        z-index: 3;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+        border: 3px solid #fff;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        label {
+            position: absolute;
+            font-size: 20px;
+            padding: 0.5%;
+            background: #fff;
+            border-radius: 50%;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15px;
+            height: 15px;
+    
+            i {
+                font-size: 10px;
+                color: #871E99;
+            }
+    
+        }
+    }
+}
+
+.prolific-details {
+    width: 100%;
+    margin-top: 7%;
+        h3 {
+            margin-left: 2%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+            color: #330F39;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+        }
+
+        h4 {
+            margin-left: 2%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #871E99;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin-left: 2%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #330F39;
+            text-transform: capitalize;
+            letter-spacing: 3px; 
+        }
+}

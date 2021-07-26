@@ -125,7 +125,7 @@
                             <div class="profile-img"> <img src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
-                                <small>Created At  {{ $Post->created_at }} </small>
+                                <small>Created At  {{ ago($Post->created_at) }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
                                 <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">
@@ -230,7 +230,7 @@
                             <div class="profile-img"> <img onclick="modal(event)" src="{{ asset('images/Rectangle 402.png') }}" alt=""></div>
                             <div class="content-visible">
                                 <h2>{{ $Post->user->name ?? 'No name'}} {{ $Post->user->last_name ?? 'No name'}}</h2>
-                                <small>Created At  {{ $Post->created_at }} </small>
+                                <small>Created At  {{ ago($Post->created_at) }} </small>
                                 <h3>{{ $Post->title }}</h3>
                                 <p class="show-read-more"> {{ $Post->Body }} <a href="/{{ $Post->id }}">Read More</a></p>
                                 <img onclick="modal(event)" src="{{ asset('images/'. $Post->image_path) }}" alt="">
