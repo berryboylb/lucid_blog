@@ -3422,6 +3422,7 @@ footer .footer-inner ul li a:hover {
   align-items: center;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .my-cover-img-con label i {
   font-size: 15px;
@@ -3466,6 +3467,7 @@ footer .footer-inner ul li a:hover {
   align-items: center;
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 .profile-pic-form div label i {
   font-size: 10px;
@@ -3493,7 +3495,7 @@ footer .footer-inner ul li a:hover {
   color: #871E99;
   text-transform: capitalize;
 }
-.prolific-details p {
+.prolific-details h5 {
   margin-left: 2%;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -3501,4 +3503,147 @@ footer .footer-inner ul li a:hover {
   color: #330F39;
   text-transform: capitalize;
   letter-spacing: 3px;
+}
+.prolific-details h5 i {
+  cursor: pointer;
+  padding: 1%;
+}
+.prolific-details div {
+  display: flex;
+  align-items: center;
+}
+.prolific-details div p {
+  margin-left: 2%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ddd;
+  text-transform: capitalize;
+}
+
+.edit-profile-details {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.edit-profile-details span {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.edit-profile-details span:hover,
+.edit-profile-details span:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.edit-profile-details div {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+  border-radius: 10px;
+  width: 50%;
+}
+.edit-profile-details div label {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #330F39;
+  text-transform: capitalize;
+  margin-top: 2%;
+}
+.edit-profile-details div .details-input {
+  width: 100%;
+  outline: none;
+  background: none;
+  border: 1px solid rgba(135, 30, 153, 0.1);
+  border-radius: 2px;
+  padding: 2%;
+  margin-top: 2%;
+  font-size: 14px;
+  color: #817474;
+  font-family: "Poppins", sans-serif;
+}
+.edit-profile-details div .details-input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #817474;
+}
+.edit-profile-details div .details-input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #817474;
+}
+.edit-profile-details div .details-input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #817474;
+}
+.edit-profile-details div .details-input:focus, .edit-profile-details div .post-body:focus {
+  border: 1px solid rgba(135, 30, 153, 0.5);
+}
+.edit-profile-details div .details-submit {
+  background: #871E99;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  padding: 2%;
+  width: 30%;
+  margin-top: 3%;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%);
+}
+.edit-profile-details div .details-submit:hover {
+  background: none;
+  border: 1px solid #871E99;
+  color: #871E99;
+}
+
+.see {
+  display: flex;
+}
+
+.followed-followers {
+  display: flex;
+  align-items: center;
+}
+.followed-followers div {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+}
+.followed-followers div .word {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #330F39;
+  text-transform: capitalize;
+}
+.followed-followers div .num {
+  margin-left: 5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ddd;
+  text-transform: capitalize;
 }

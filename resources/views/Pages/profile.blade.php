@@ -50,21 +50,36 @@
                             <div class="prolific-details">
                                 <h3>{{ $User->name }} {{ $User->last_name }}</h3>
                                 <h4>{{ $User->email }}</h4>
-                                <p>Graphic Designer at Self <i class="fas fa-pencil-alt"></i></p>
+                                <h5>Graphic Designer at Self<i id="edit" class="fas fa-pencil-alt"></i></h5>
+                                <div>
+                                    <p>Location</p>
+                                    <p>Birthday</p>
+                                    <p>Joined on {{ $User->created_at }}</p>
+                                </div>
                             </div>
 
-                            <form action="" method="post">
-                                <input type="text" value="">
-                                <input type="submit" value="Save Changes">
+                            <form action="" method="post" class="edit-profile-details">
+                                <span class="closed">&times;</span>
+                               <div>
+                                    <label for="about">About</label>
+                                    <input type="text" id="about" value="" class="details-input">
+                                    <label for="location">Location</label >
+                                    <input type="text" id="location" value="" class="details-input">
+                                    <label for="birthday">Birthday</label>
+                                    <input type="date" name="" id="birthday" class="details-input">
+                                    <input type="submit" value="Save Changes" class="details-submit">
+                               </div>
                             </form>
-                            <div>
-                                <h3>Following</h3>
-                                <p>50</p>
-                            </div>
-    
-                            <div>
-                                <h3>Followers</h3>
-                                <p>500</p>
+                            <div class="followed-followers">
+                                <div>
+                                    <p class="word">50</p>
+                                    <p class="num">Following</p>
+                                    
+                                </div>
+                                <div>
+                                    <p class="word">500</p>
+                                    <p class="num">Followers</p>
+                                </div>
                             </div>
                 </div>
                          <div>
@@ -334,6 +349,19 @@
                 modal.style.display = "none";
             }
             }
+
+            const close = document.querySelector(".closed");
+            const edit = document.querySelector("#edit");
+            const detailsForm = document.querySelector(".edit-profile-details")
+            edit.onclick = () => {
+                detailsForm.style.display = "flex";
+            }
+            close.onclick = () => {
+                detailsForm.style.display = "none";
+            }
+
         </script>
+
+    
     </section>
 @endsection
