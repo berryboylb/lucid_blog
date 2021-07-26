@@ -1902,6 +1902,7 @@ footer {
     max-width: 700px;
     height: 70vh !important;
     object-fit: contain !important;
+    background: none !important;
   }
   
   /* Caption of Modal Image */
@@ -1957,6 +1958,12 @@ footer {
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
+    //   .modal {
+    //       display: flex;
+    //       justify-content: center;
+    //       align-items: center;
+    //       flex-direction: column;
+    //   }
     .modal-content {
       width: 100%;
     }
@@ -3610,3 +3617,24 @@ footer {
     background: #871e99;
 }
 
+.profile-me {
+    width: 100%;
+
+    .cover-img {
+        width: 100%;
+    }
+}
+
+.profile-img-con {
+    position: relative;
+    i {
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        z-index: 9999 !important;
+        color: #fff;
+        background: #871E99;
+        padding: 2%;
+    }
+}

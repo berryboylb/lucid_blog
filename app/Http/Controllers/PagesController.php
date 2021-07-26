@@ -60,7 +60,7 @@ class PagesController extends Controller
         foreach($Posts->comment as $comments){
             $img = url(htmlspecialchars(stripslashes(trim('profile_pictures/Ellipse.png'))));
             $name = $Posts->user->name ?? 'Anonymous';
-            $time = timeDifference($comments->created_at);
+            $time = ago($comments->created_at);
             echo"<div class='one-person-comment'>
                 <div class='comment-img'>
                     <img src=$img alt=''>
@@ -106,5 +106,16 @@ class PagesController extends Controller
         }
         
 
+    }
+
+    public function userProfile(){
+        $Categories = Categories::all();
+        $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
+        $links = Link::all();
+        return view('Pages.profile', [
+            'Categories' => $Categories,
+            'Ui_designs' => $Ui_designs,
+            'links' => $links,
+        ]);
     }
 }

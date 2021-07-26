@@ -205,7 +205,7 @@
                             <form action="{{ route('comment') }}"  method="post" class="comment-form">
                                 @csrf
                                 <input type="hidden" name="posts_id" value="{{ $Posts->id }}">
-                                <textarea name="Body" placeholder="Write a comment..."></textarea>
+                                <textarea name="Body" id="bopeep" placeholder="Write a comment..."></textarea>
                                 <button type="Submit">Comment</button>
                             </form>
                         </div>
@@ -222,7 +222,7 @@
                                     </div>
                                     <div class="brave">
                                         <div class="name-time">
-                                            <h4>{{ $Posts->user->name ?? 'Anonymous'}}</h4>
+                                            <h4>{{ $Posts->user->name ?? 'No name'}} {{ $Posts->user->last_name ?? 'No name'}}</h4>
                                             <small> <i class="fas fa-eye"></i> {{ ago($comments->created_at) }}</small>
                                         </div>
                                         <div class="the-comment">
@@ -286,6 +286,9 @@
     
                         success: function(response)
                         {
+                            $('#bopeep').empty();
+                            var bopeep = document.querySelector('#bopeep');
+                            bopeep.innerHTML = "";
                             //our response what was echoed in the
                             //empty the div for a new comment
                             $('#bube-ajax').empty();

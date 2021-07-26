@@ -8,6 +8,7 @@ use App\Models\Link;
 use App\Models\Ui_design;
 use App\Models\Categories;
 use App\Models\Posts;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
@@ -56,13 +57,15 @@ class PostController extends Controller
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
         $links = Link::all();
         $Categories = Categories::all();
-        $User = Auth::user()->id;
+        $User = Auth::user();
+        $Users = User::OrderBy('created_at', 'desc')->paginate(10);
         
         return view('Pages.create', [
             'Ui_designs'=> $Ui_designs,
             'links' => $links,
             'Categories' => $Categories,
-            'User' => $User
+            'User' => $User,
+            'Users' => $Users
         ]);
     }
 

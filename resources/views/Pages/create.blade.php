@@ -11,7 +11,7 @@
                         <div class="profile-img-con">
                             <img src="{{ asset('images/Rectangle 402.png') }}" alt="{{ asset('profile_pictures/Ellipse 9.png') }}">
                         </div>
-                        <h3>ENAS OBZ</h3>
+                        <h3>{{ $User->name }} {{ $User->last_name }}</h3>
                         <p>Graphic Designer at Self</p>
                     </div>
 
@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="bio-link">
-                        <a href="#">Click to set your bio </a>
+                        <a href="/profile">Click to set your bio </a>
                     </div>
                 </div>
 
@@ -37,46 +37,21 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                     <div class="people-suggestions">
+                        @foreach ($Users as $User)
                         <div class="one-person">
                             <div class="one-person-content">
                                 <div class="one-person-img">
                                     <img src="{{ asset('images/photo.png') }}" alt="">
                                 </div>
                                 <div class="eagle">
-                                    <h3>Jessica William</h3>
+                                    <h3>{{ $User->name }} {{ $User->last_name }}</h3>
                                     <p>Graphic Designer</p>
                                 </div>
                             </div>
 
                             <i class="fas fa-plus"></i>
                         </div>
-
-                        <div class="one-person">
-                            <div class="one-person-content">
-                                <div class="one-person-img">
-                                    <img src="{{ asset('images/photo.png') }}" alt="">
-                                </div>
-                                <div class="eagle">
-                                    <h3>Jessica William</h3>
-                                    <p>Graphic Designer</p>
-                                </div>
-                            </div>
-
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="one-person">
-                            <div class="one-person-content">
-                                <div class="one-person-img">
-                                    <img src="{{ asset('images/photo.png') }}" alt="">
-                                </div>
-                                <div class="eagle">
-                                    <h3>Jessica William</h3>
-                                    <p>Graphic Designer</p>
-                                </div>
-                            </div>
-
-                            <i class="fas fa-plus"></i>
-                        </div>
+                        @endforeach
                     </div>
 
                     <script>
@@ -133,10 +108,10 @@
                             <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
                             <div class="float-right">
                                <div class="edit">
-                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                                <a href="bars/{{ $Post->id }}/edit">Edit</a>
                                </div>
             
-                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                <form action="/bars/{{ $Post->id }}" class="pt-3" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button
@@ -232,16 +207,16 @@
                   <div id="Paris" class="tabcontent">
                     @foreach ($Categories as $Category)
                      @foreach ($Category->posts as $Post )
-                     @if ($Post->user_id == $User)
+                     @if ($Post->user_id == $User->id)
                      <div class="profile-posts">
                         <div class="main-content">
                             <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
                             <div class="float-right">
                                <div class="edit">
-                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                                <a href="bars/{{ $Post->id }}/edit">Edit</a>
                                </div>
             
-                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                <form action="/bars/{{ $Post->id }}" class="pt-3" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button
@@ -270,7 +245,7 @@
                                         <i class="far fa-heart"></i>
                                         <span> Likes</span>
                                     </a>
-                                    <a href="">
+                                    <a href="/bars/{{ $Post->id }}">
                                         <i class="far fa-comment-alt"></i>
                                         <i class="far fa-eye"></i>
                                         <span>Comments</span>
@@ -296,10 +271,10 @@
                             <i class="fas fa-ellipsis-v" id="edit-delete" onclick="editDelete(event)"></i>
                             <div class="float-right">
                                <div class="edit">
-                                <a href="/{{ $Post->id }}/edit">Edit</a>
+                                <a href="bars/{{ $Post->id }}/edit">Edit</a>
                                </div>
             
-                                <form action="/{{ $Post->id }}" class="pt-3" method="post">
+                                <form action="/bars/{{ $Post->id }}" class="pt-3" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button

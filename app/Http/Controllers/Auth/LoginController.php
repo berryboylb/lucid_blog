@@ -71,4 +71,6 @@ class LoginController extends \App\Http\Controllers\Controller
         }
         return redirect()->back();
     }
+
+    
 }
