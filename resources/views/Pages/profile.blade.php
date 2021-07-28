@@ -29,22 +29,68 @@
             </div>
             <div class="posts-one" style="padding: 0">
                 <div class="profile-credentials">
-                       <form action="" method="post" class="cover-img-form">
+                       <form action="/coverImage/{{$User->coverImage->image_path}}" method="post" class="cover-img-form" enctype="multipart/form-data">
                            @csrf
                            <div class="my-cover-img-con">
-                                <img src="{{ asset('images/Banner.png') }}">
+                                <img src="{{ asset('cover_image/'. $coverImage) ?? asset('images/anonymous.jpg') }}">
                                 <label for="my-profile-cover-img"><i class="fas fa-pencil-alt"></i></label>
                            </div>
-                           <input type="file"  class="none" id="my-profile-cover-img">
-                           <input type="Submit"  value="submit" class="none">
+                           <input type="file" name ="image"   class="none" id="my-profile-cover-img">
+                           <input type="Submit"  value="submit" id="cover-submit" class="none">
                        </form>
-                       <form action="" method="post" class="profile-pic-form">
-                            <div>
-                                <img src="{{ asset('images/Rectangle 402.png') }}" alt="{{ asset('profile_pictures/Ellipse 9.png') }}">
+                       <script>
+                        //picks and submits form inputs
+                        $(document).ready(function(){
+                            $('form.cover-img-form').on('submit', function(){
+                
+                                var that = $(this),
+                                    url = that.attr('action'),
+                                    type = that.attr('method'),
+                                    data = {};
+                
+                                that.find('[name]').each(function(index, value) {
+                                    var that = $(this),
+                                        name = that.attr('name'),
+                                        value = that.val();
+                
+                                    data[name] = value;
+                                });
+                
+                                $.ajax({
+                                    url: url,
+                                    type: type,
+                                    data: data,
+                
+                                    success: function(response)
+                                    {
+
+                                        $('.my-cover-img-con').empty();
+                                        //append what was echoed in the controller
+                                        $('.my-cover-img-con').html(response);
+                                    },
+
+                                    error: function(response)
+                                    {
+
+                                        // $('.my-cover-img-con').empty();
+                                        // //append what was echoed in the controller
+                                        // $('.my-cover-img-con').html(response);
+                                        console.log(response);
+                                    }
+                                });
+                                return false;
+                            });
+                        });
+                    </script>
+                       <form action="{{ route('profileImage') }}" method="post" class="profile-pic-form" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                            <div class="my-profile-img-con">
+                                <img src="{{ asset('profile_pictures/'. $profileImage) ?? asset('images/anonymous.jpg') }}">
                                 <label for="my-profile-img"><i class="fas fa-pencil-alt"></i></label>
                             </div>
-                            <input type="file"  class="none" id="my-profile-img">
-                            <input type="Submit" class="none"  value="submit">
+                            <input type="file" name="image"  class="none" id="my-profile-img">
+                            <input type="Submit" class="none" id="picture-submit"  value="submit">
                         </form>
         
                             <div class="prolific-details">
@@ -360,8 +406,20 @@
                 detailsForm.style.display = "none";
             }
 
-        </script>
+            //submitting forms automatically 
+            $('form.cover-img-form').on("change", function (event) {
+                if (event.target.files.length == 1) {
+                    // alert("uploaded");
+                    $('#cover-submit').click();
+                }})
 
-    
+
+                $('#my-profile-img').on("change", function (event) {
+                if (event.target.files.length == 1) {
+                    // alert("uploaded");
+                    $('#picture-submit').click();
+                }})
+        </script>
+        
     </section>
 @endsection

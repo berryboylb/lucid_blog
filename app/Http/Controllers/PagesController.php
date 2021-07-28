@@ -11,6 +11,8 @@ use App\Models\Categories;
 use App\Models\comment;
 use App\Models\Posts;
 use App\Models\newsletter;
+use App\Models\coverImage;
+use App\Models\profileImage;
 
 class PagesController extends Controller
 {
@@ -37,8 +39,7 @@ class PagesController extends Controller
             'Body' => 'required|unique:comment',
         ]);
         
-        //$new_users_id = Auth::user()->id;
-        $new_users_id = 1;
+        $new_users_id = Auth::user()->id;
 
         //change it back when you do user auth
         $new_Posts = 2;
@@ -113,11 +114,69 @@ class PagesController extends Controller
         $Ui_designs = Ui_design::where('id', '=', '1')->firstOrFail();
         $links = Link::all();
         $User = Auth::user();
+        $coverImage = $User->coverImage->image_path;
+        $profileImage = $User->profileImage->image_path;
+        //dd($profileImage);
         return view('Pages.profile', [
             'Categories' => $Categories,
             'Ui_designs' => $Ui_designs,
             'links' => $links,
             'User' => $User,
+            'coverImage' => $coverImage,
+            'profileImage' => $profileImage,
         ]);
+    }
+
+    public function coverImage(Request $request, $path){
+        ///validate
+        $request->validate([
+            'image' => 'required|mimes:png,jpg,jpeg|max:5048',
+        ]); 
+
+        //dd($path);
+         //fetch and create an extension for the cover image
+         $newCoverImage = Auth::user()->name . Auth::user()->last_name . "cover_image" . time() . '-' . $request->string . '.' . $request->image->extension();
+         $request->image->move(public_path('cover_image'), $newCoverImage);
+
+        if(is_null($path)){
+            //store it
+            $coverImage = coverImage::create([
+            'users_id' => Auth::user()->id,
+            'image_path' => $newCoverImage
+            ]);
+        }
+        else {
+            coverImage::where('users_id',Auth::user()->id)
+                ->update(['users_id'=>Auth::user()->id, 
+                          'image_path' => $newCoverImage]);
+        }
+         
+         $img = url(htmlspecialchars(stripslashes(trim('cover_image/'. $newCoverImage))));
+
+        echo "<img src=$img>
+              <label for='my-profile-cover-img'><i class='fas fa-pencil-alt'></i></label>";
+    }
+
+
+
+    public function profileImage(Request $request){
+        //validate
+        $request->validate([
+            'image' => 'required|mimes:png,jpg,jpeg|max:5048',
+        ]);
+
+       
+         //fetch and create an extension for the cover image
+        $newProfileImage = Auth::user()->name . Auth::user()->last_name . "profile_image" . time() . '-' . $request->string . '.' . $request->image->extension();
+        $request->image->move(public_path('profile_pictures'), $newProfileImage);
+
+        //store it
+        $profileImage = profileImage::create([
+            'users_id' => Auth::user()->id,
+            'image_path' => $newProfileImage
+        ]);
+
+        echo "<img src='{{ asset('profile_pictures/'. $profileImage) ?? asset('images/anonymous.jpg') }}'>
+              <label for='my-profile-img'><i class='fas fa-pencil-alt'></i></label>";
     }
 }

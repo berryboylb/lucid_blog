@@ -421,6 +421,7 @@
             });
         </script>
         <script>
+            //tag library
             $('#categories_tags').tags();
         </script>
     </section>

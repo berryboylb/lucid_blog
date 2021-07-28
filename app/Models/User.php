@@ -45,11 +45,18 @@ class User extends Authenticatable
     protected $table = 'users';
 
     public function posts() {
-       
-        return $this->hasOne(Post::class, 'id');
+       return $this->hasMany(Post::class, 'id');
     }
 
     public function newsletter(){
         return $this->hasOne(newsletter::class);
+    }
+
+    public function coverImage(){
+        return $this->hasOne(coverImage::class, 'users_id');
+    }
+
+    public function profileImage(){
+        return $this->hasOne(profileImage::class, 'users_id');
     }
 }
