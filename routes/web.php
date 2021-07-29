@@ -35,5 +35,5 @@ Route::get("/profile", [\App\Http\Controllers\PagesController::class, "userProfi
 Route::post('/form', [\App\Http\Controllers\PagesController::class, 'form'])->name('comment');
 Route::post('/newsletter', [\App\Http\Controllers\PagesController::class, 'newsLetter'])->name('newsLetter');
 Route::post('/coverImage/{path}', [\App\Http\Controllers\PagesController::class, 'coverImage'])->name('coverImage');
-Route::post('/profileImage', [\App\Http\Controllers\PagesController::class, 'profileImage'])->name('profileImage');
+Route::post('/profileImage/{path}', [\App\Http\Controllers\PagesController::class, 'profileImage'])->name('profileImage');
 Route::resource('/bars', 'App\Http\Controllers\PostController');

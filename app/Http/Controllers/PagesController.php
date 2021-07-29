@@ -159,7 +159,7 @@ class PagesController extends Controller
 
 
 
-    public function profileImage(Request $request){
+    public function profileImage(Request $request, $path){
         //validate
         $request->validate([
             'image' => 'required|mimes:png,jpg,jpeg|max:5048',
@@ -170,13 +170,22 @@ class PagesController extends Controller
         $newProfileImage = Auth::user()->name . Auth::user()->last_name . "profile_image" . time() . '-' . $request->string . '.' . $request->image->extension();
         $request->image->move(public_path('profile_pictures'), $newProfileImage);
 
-        //store it
-        $profileImage = profileImage::create([
-            'users_id' => Auth::user()->id,
-            'image_path' => $newProfileImage
-        ]);
-
-        echo "<img src='{{ asset('profile_pictures/'. $profileImage) ?? asset('images/anonymous.jpg') }}'>
+        if(is_null($path)){
+            //create and store it
+            $profileImage = profileImage::create([
+                'users_id' => Auth::user()->id,
+                'image_path' => $newProfileImage
+            ]);
+        }
+        else {
+            //edit and store it
+            profileImage::where('users_id',Auth::user()->id)
+                ->update(['users_id'=>Auth::user()->id, 
+                          'image_path' => $newProfileImage]);
+        }
+       
+        $img = url(htmlspecialchars(stripslashes(trim('profile_pictures/'. $newProfileImage))));
+        echo "<img src=$img>
               <label for='my-profile-img'><i class='fas fa-pencil-alt'></i></label>";
     }
 }

@@ -75,16 +75,15 @@
                                         // $('.my-cover-img-con').empty();
                                         // //append what was echoed in the controller
                                         // $('.my-cover-img-con').html(response);
-                                        console.log(response);
+                                        console.log(response)
                                     }
                                 });
                                 return false;
                             });
                         });
                     </script>
-                       <form action="{{ route('profileImage') }}" method="post" class="profile-pic-form" enctype="multipart/form-data">
+                       <form action="/profileImage/{{$User->profileImage->image_path}}" method="post" class="profile-pic-form" enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
                             <div class="my-profile-img-con">
                                 <img src="{{ asset('profile_pictures/'. $profileImage) ?? asset('images/anonymous.jpg') }}">
                                 <label for="my-profile-img"><i class="fas fa-pencil-alt"></i></label>

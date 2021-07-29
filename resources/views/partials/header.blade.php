@@ -4,11 +4,11 @@
             <li><a href="/bars" class="{{ request()->is('/') ? 'active-link' : '' }}">Home</a></li>
             <li><a href="/bars/create"  class="{{ request()->is('/create') ? 'active-link' : '' }}">Explore</a></li>
             <li><a href="#"><i class="fas fa-bell"></i></a></li>
-            <li><a href="#"><img src="{{ asset('profile_pictures/'. $profileImage) ? asset('images/anonymous.jpg') : '' }}" alt=""></i></a></li>
+            <li><a href="#"><img src="{{ asset('images/anonymous.jpg') }}" alt=""></i></a></li>
             <li><a href="#"><i class="fas fa-sort-down" id="dropDown"></i></a></li>
             <div class="dropdown-content">
                 <div class="profile-details">
-                    <div class="img-con"><img src="{{ asset('profile_pictures/'. $profileImage) ? asset('images/anonymous.jpg') : '' }}" alt="Profile picture"></div>
+                    <div class="img-con"><img src="{{ asset('images/anonymous.jpg') }}" alt="Profile picture"></div>
                     <div class="name-cone">
                         <h1>{{ $User->name }} {{ $User->last_name }}</h1>
                         <p>{{ $User->email }}</p>
