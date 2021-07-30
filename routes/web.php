@@ -36,4 +36,5 @@ Route::post('/form', [\App\Http\Controllers\PagesController::class, 'form'])->na
 Route::post('/newsletter', [\App\Http\Controllers\PagesController::class, 'newsLetter'])->name('newsLetter');
 Route::post('/coverImage/{path}', [\App\Http\Controllers\PagesController::class, 'coverImage'])->name('coverImage');
 Route::post('/profileImage/{path}', [\App\Http\Controllers\PagesController::class, 'profileImage'])->name('profileImage');
+Route::post('/userDetails/{users_id}', [\App\Http\Controllers\PagesController::class, 'userDetails'])->name('userDetails');
 Route::resource('/bars', 'App\Http\Controllers\PostController');

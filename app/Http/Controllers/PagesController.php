@@ -188,4 +188,30 @@ class PagesController extends Controller
         echo "<img src=$img>
               <label for='my-profile-img'><i class='fas fa-pencil-alt'></i></label>";
     }
+
+    public function userDetails(Request $request, $users_id){
+        $request->validate([
+            'about' => 'required',
+            'location' => 'nullable',
+            'birthday' => 'nullable',
+        ]);
+
+        if(is_null($users_id)){
+            //create and store it
+            $userDetails = userDetails::create([
+                'users_id' => Auth::user()->id,
+                'about' => $request->input('about'),
+                'location' => $request->input('location'),
+                'birthday' => $request->input('birthday'),
+            ]);
+        }
+        else {
+            //edit and store it
+            userDetails::where('users_id',Auth::user()->id)
+                ->update(['users_id'=>Auth::user()->id, 
+                'about' => $request->input('about'),
+                'location' => $request->input('location'),
+                'birthday' => $request->input('birthday'),]);
+        }
+    }
 }

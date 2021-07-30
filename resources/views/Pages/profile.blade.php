@@ -103,15 +103,16 @@
                                 </div>
                             </div>
 
-                            <form action="" method="post" class="edit-profile-details">
+                            <form action="/userDetails/{{$User->userDetails->users_id}}" method="post" class="edit-profile-details">
+                                @csrf
                                 <span class="closed">&times;</span>
                                <div>
                                     <label for="about">About</label>
-                                    <input type="text" id="about" value="" class="details-input">
+                                    <input type="text" id="about" name="about" value="" class="details-input">
                                     <label for="location">Location</label >
-                                    <input type="text" id="location" value="" class="details-input">
+                                    <input type="text" id="location" name="location" value="" class="details-input">
                                     <label for="birthday">Birthday</label>
-                                    <input type="date" name="" id="birthday" class="details-input">
+                                    <input type="date" name="birthday" id="birthday" class="details-input">
                                     <input type="submit" value="Save Changes" class="details-submit">
                                </div>
                             </form>
